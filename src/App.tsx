@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
 import Card from './Card';
 import Stats from './Stats';
+import Abilities from './Abilities';
+import './App.css';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         </div>
         <div className="rigth-col">
           <Stats />
+          <Abilities />
         </div>
       </main>
     </div>
