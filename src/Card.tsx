@@ -7,9 +7,9 @@ interface Props {
 const Card = (props: Props) => {
   return (
     <div className="background-by-type">
-      <div className="pokemon-image"></div>
-      <div className="pokemon-name"></div>
-      <div className="description"></div>
+      <div className="pokemon-image">pokemon IMAGE goes here!</div>
+      <div className="pokemon-name">pokemon NAME goes here!</div>
+      <div className="description">pokemon DESCRIPTION goes here!</div>
     </div>
   );
 };
