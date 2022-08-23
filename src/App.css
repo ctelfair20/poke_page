@@ -14,13 +14,26 @@ h1 {
   text-align: center;
 }
 
-main {}
+main {
+  background-color: blueviolet;
+  margin: 25px 100px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rigth-col {
+  background-color: brown;
+  width: 360px;
+}
 
 .background-by-type {
   background-color: aquamarine;
   color: darkslategrey;
-  margin-left: 40px;
-  margin-top: 20px;
   height: 500px;
   width: 500px;
+}
+
+.pokemon-stats {
+  background-color: aqua;
+  color: rgb(64, 0, 255);
 }

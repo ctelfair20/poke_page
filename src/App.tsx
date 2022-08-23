@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Card from './Card';
 import Stats from './Stats';
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <h1>Pokemon Page</h1>
