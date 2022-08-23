@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Stats from './Stats';
 import Abilities from './Abilities';
+import Actions from './Attacks';
 import './App.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <div className="rigth-col">
           <Stats />
           <Abilities />
+          <Actions />
         </div>
       </main>
     </div>
