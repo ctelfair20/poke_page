@@ -3,7 +3,9 @@ import Card from './Card';
 import Stats from './Stats';
 import Abilities from './Abilities';
 import Actions from './Attacks';
+import Pokeball from './Pokeball';
 import './App.css';
+
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
           <Stats />
           <Abilities />
           <Actions />
+          <Pokeball />
         </div>
       </main>
     </div>
