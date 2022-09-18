@@ -5,7 +5,7 @@ body {
 
 .App {
   color: aliceblue;
-  background-color: #282c34;
+  /* background-color: #282c34; */
   height: 100vh;
 }
 
@@ -28,7 +28,7 @@ main {
 
 .background-by-type {
   background-color: aquamarine;
-  color: darkslategrey;
+  /* color: darkslategrey; */
   height: 500px;
   width: 500px;
 }
