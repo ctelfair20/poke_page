@@ -14,10 +14,11 @@ const Pokeball = (props: Props) => {
     return Math.floor(Math.random() * 905) + 1;
   }
 
-  const handleOnClick = async (): Promise<Array<Pokemon>> => {
+  const handleOnClick = async () => {
     const { data } = await axios.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
+    // TODO: Do something with the data that we get back
+    // probably set the data in state
     console.log(data);
-    return data;
   }
 
   return (

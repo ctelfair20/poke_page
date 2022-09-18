@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from './Card';
-import Stats from './Stats';
-import Abilities from './Abilities';
-import Actions from './Attacks';
-import Pokeball from './Pokeball';
+import Card from './components/Card';
+import Stats from './components/Stats';
+import Abilities from './components/Abilities';
+import Actions from './components/Attacks';
+import Pokeball from './components/Pokeball';
 import './App.css';
 
 
