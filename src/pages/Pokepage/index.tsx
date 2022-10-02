@@ -13,42 +13,50 @@ const emptyData: pokeInterface = {};
 const pokeData = {
   empty: emptyData,
   full: initialPokeData,
+  valid: initialPokeData,
 }
 
 export const PokeContext = createContext(pokeData.empty);
+export const PokeIdContext = createContext(pokeData.empty);
 
 const PokePage = () => {
   const [name, setName] = useState<'empty' | 'full'>('empty');
+  const [id, setId] = useState<'empty' | 'valid'>('empty');
 
   const handleClick = () => {
     const data = name === 'empty' ? 'full' : 'empty';
+    const newId = id === 'empty' ? 'valid' : 'empty';
     setName(data);
+    setId(newId);
   }
 
   return (
     <PokeContext.Provider value={pokeData[name]}>
-      <Box className="pokemon-page">
-        <Typography>Pokemon Page</Typography>
-        <Container>
-          <Grid
-            container
-            direction="row"
-            justifyContent="space-evenly"
-            alignItems="center"
-          >
-            <Box className="left-col">
-              <PokeCard />
-            </Box>
-            <Box className="rigth-col">
-              <Stats />
-              <Abilities />
-              <Actions />
-              <Pokeball />
-              <Button onClick={handleClick}>Poke</Button>
-            </Box>
-          </Grid>
-        </Container>
-      </Box>
+      <PokeIdContext.Provider value={pokeData[id]}>
+
+        <Box className="pokemon-page">
+          <Typography>Pokemon Page</Typography>
+          <Container>
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-evenly"
+              alignItems="center"
+            >
+              <Box className="left-col">
+                <PokeCard />
+              </Box>
+              <Box className="rigth-col">
+                <Stats />
+                <Abilities />
+                <Actions />
+                <Pokeball />
+                <Button onClick={handleClick}>Poke</Button>
+              </Box>
+            </Grid>
+          </Container>
+        </Box>
+      </PokeIdContext.Provider>
     </PokeContext.Provider >
   );
 }

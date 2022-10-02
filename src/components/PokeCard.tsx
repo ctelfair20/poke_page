@@ -1,7 +1,7 @@
 import { Box, Card } from '@mui/material';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useContext } from 'react';
-import { PokeContext } from '../pages/Pokepage';
+import { PokeContext, PokeIdContext } from '../pages/Pokepage';
 
 interface Props {
 
@@ -9,7 +9,8 @@ interface Props {
 
 const PokeCard = (props: Props) => {
 
-  const { name } = useContext(PokeContext)
+  const { name } = useContext(PokeContext);
+  const { id } = useContext(PokeIdContext);
   // const getPokemonName = () => {
 
   // }
@@ -20,7 +21,7 @@ const PokeCard = (props: Props) => {
       className="background-by-type"
     >
       <Box className="pokemon-image">pokemon IMAGE goes here!</Box>
-      <Box className="pokemon-name">pokemon {name} goes here!</Box>
+      <Box className="pokemon-name">pokemon {id} {name} goes here!</Box>
       <Box className="description">pokemon DESCRIPTION goes here!</Box>
     </Card>
   );
