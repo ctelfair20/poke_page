@@ -7,10 +7,14 @@ interface Props {
 
 const Abilities = (props: Props) => {
 
-  const pokemonInfo = useContext(PokeContext);
+  const { abilities } = useContext(PokeContext);
+
+  const abilitesMap = abilities?.map((ability, i) => {
+    return <Box key={'ab' + i}>{ability.ability.name[0].toUpperCase() + ability.ability.name.slice(1)}</Box>
+  })
 
   return (
-    <Box className="pokemon-abilities">Abilities: { }</Box>
+    <Box className="pokemon-abilities">Abilities: {abilitesMap}</Box>
   );
 }
 
