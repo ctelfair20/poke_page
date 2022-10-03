@@ -39,7 +39,7 @@ const PokePage = () => {
             <Box className="left-col">
               <PokeCard />
             </Box>
-            <Box className="rigth-col">
+            <Box className="right-col">
               <Stats />
               <Abilities />
               <Actions />
