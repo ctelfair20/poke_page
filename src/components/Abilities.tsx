@@ -10,7 +10,7 @@ const Abilities = (props: Props) => {
   const pokemonInfo = useContext(PokeContext);
 
   return (
-    <Box className="pokemon-abilities">The pokemon ABILITIES go there!!</Box>
+    <Box className="pokemon-abilities">Abilities: { }</Box>
   );
 }
 
