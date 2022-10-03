@@ -4,11 +4,18 @@ export const data: pokeInterface = {
   "abilities": [
     {
       ability: {
-        name: "flamethrower"
+        name: "limber"
       },
-      "is_hidden": true
+      "is_hidden": false
     }
   ],
   "id": 5,
   "name": "Ditto",
+  "moves": [
+    {
+      move: {
+        name: "transform"
+      }
+    }
+  ]
 }

@@ -7,7 +7,7 @@ export interface pokeInterface {
   id?: number;
   is_default?: boolean;
   location_area_encounters?: string;
-  moves?: []; //!
+  moves?: movesI[]; //!
   name?: string; //!
   order?: number;
   past_types?: [];
@@ -39,4 +39,10 @@ export interface abilitiesI {
     name: string
   }
   "is_hidden": boolean
+}
+
+export interface movesI {
+  move: {
+    name: string
+  }
 }
