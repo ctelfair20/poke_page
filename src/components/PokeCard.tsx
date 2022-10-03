@@ -9,7 +9,7 @@ interface Props {
 
 const PokeCard = (props: Props) => {
 
-  const { name, sprites, types } = useContext(PokeContext);
+  const { name, sprites, types, height, weight } = useContext(PokeContext);
   const { id } = useContext(PokeIdContext);
   // const getPokemonName = () => {
 
@@ -25,7 +25,7 @@ const PokeCard = (props: Props) => {
       </Box>
       <Box className="pokemon-name">Name: {name} </Box>
       <Box className="pokemon-description">
-        Description: Types:{types?.[0].type.name}
+        Description: Types:{types?.[0].type.name} Height: {height} Weight:{weight}
       </Box>
     </Card>
   );

@@ -9,6 +9,7 @@ export const data: pokeInterface = {
       "is_hidden": false
     }
   ],
+  height: 3,
   id: 5,
   name: "Ditto",
   moves: [
@@ -31,5 +32,6 @@ export const data: pokeInterface = {
         name: "normal"
       }
     }
-  ]
+  ],
+  weight: 40
 }
