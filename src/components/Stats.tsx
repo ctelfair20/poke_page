@@ -13,7 +13,7 @@ const Stats = (props: Props) => {
   // iterate over pokemon stats and display them
   // DON'T WRAP MAPPING FUNCTIONS! THINGS GET CONFUSING! -- ASK ROB
   const statsMap = stats?.map((stat, i) => {
-    return <Box key={'st' + i}>{stat.stat.name}: {stat['base-stat']}</Box>;
+    return <Box key={'st' + i}>{stat.stat.name[0].toUpperCase() + stat.stat.name.slice(1)}: {stat['base-stat']}</Box>;
   });
 
   return (
