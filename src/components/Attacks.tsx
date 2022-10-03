@@ -7,10 +7,14 @@ interface Props {
 
 const Actions = (props: Props) => {
 
-  const pokemonInfo = useContext(PokeContext);
+  const { moves } = useContext(PokeContext);
+
+  const attacksMap = moves?.map((move, i) => {
+    return <Box key={'atk' + i}>{move.move.name}</Box>
+  })
 
   return (
-    <Box className="pokemon-actions">The pokemon ACTIONS go there!!</Box>
+    <Box className="pokemon-actions">Attacks: {attacksMap}</Box>
   );
 }
 
