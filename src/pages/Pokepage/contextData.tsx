@@ -17,5 +17,12 @@ export const data: pokeInterface = {
         name: "transform"
       }
     }
-  ]
+  ],
+  "sprites": {
+    other: {
+      "official-artwork": {
+        "front-default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+      }
+    }
+  }
 }
