@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Box, Card } from '@mui/material';
-import { statsI } from '../pages/Pokepage/interface'
 import { PokeContext } from '../pages/Pokepage/index';
 
 interface Props {
