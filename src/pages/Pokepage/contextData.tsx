@@ -1,6 +1,14 @@
 import { pokeInterface } from "./interface";
 
 export const data: pokeInterface = {
-  "name": "Ditto",
+  "abilities": [
+    {
+      ability: {
+        name: "flamethrower"
+      },
+      "is_hidden": true
+    }
+  ],
   "id": 5,
+  "name": "Ditto",
 }

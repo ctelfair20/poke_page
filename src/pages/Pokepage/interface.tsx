@@ -1,5 +1,5 @@
 export interface pokeInterface {
-  abilities?: []; //!
+  abilities?: abilitiesI[]; //!
   base_experience?: number;
   forms?: [];
   game_indices?: [];
@@ -32,4 +32,11 @@ export interface statsI {
   stat: {
     name: string
   }
+}
+
+export interface abilitiesI {
+  ability: {
+    name: string
+  }
+  "is_hidden": boolean
 }
