@@ -22,15 +22,12 @@ export const PokeIdContext = createContext(pokeData.empty);
 const PokePage = () => {
   const [name, setName] = useState<'empty' | 'full'>('empty');
   const [id, setId] = useState<'empty' | 'valid'>('empty');
-  const [abilities, setAbilities] = useState<'empty' | 'full'>('empty');
 
   const handleClick = () => {
     const data = name === 'empty' ? 'full' : 'empty';
     const newId = id === 'empty' ? 'valid' : 'empty';
-    const abilitiesList = abilities === 'empty' ? 'full' : 'empty';
     setName(data);
     setId(newId);
-    setAbilities(abilitiesList);
   }
 
   return (

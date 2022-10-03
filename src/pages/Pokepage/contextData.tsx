@@ -1,7 +1,7 @@
 import { pokeInterface } from "./interface";
 
 export const data: pokeInterface = {
-  "abilities": [
+  abilities: [
     {
       ability: {
         name: "limber"
@@ -9,20 +9,27 @@ export const data: pokeInterface = {
       "is_hidden": false
     }
   ],
-  "id": 5,
-  "name": "Ditto",
-  "moves": [
+  id: 5,
+  name: "Ditto",
+  moves: [
     {
       move: {
         name: "transform"
       }
     }
   ],
-  "sprites": {
+  sprites: {
     other: {
       "official-artwork": {
         "front-default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
       }
     }
-  }
+  },
+  types: [
+    {
+      type: {
+        name: "normal"
+      }
+    }
+  ]
 }

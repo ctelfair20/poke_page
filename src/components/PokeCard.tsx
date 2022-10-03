@@ -9,7 +9,7 @@ interface Props {
 
 const PokeCard = (props: Props) => {
 
-  const { name, sprites } = useContext(PokeContext);
+  const { name, sprites, types } = useContext(PokeContext);
   const { id } = useContext(PokeIdContext);
   // const getPokemonName = () => {
 
@@ -23,8 +23,10 @@ const PokeCard = (props: Props) => {
       <Box className="pokemon-image">
         <img src={sprites?.other['official-artwork']['front-default']} alt={name}></img>
       </Box>
-      <Box className="pokemon-name">Name: {name}</Box>
-      <Box className="pokemon-description">Description: goes here!</Box>
+      <Box className="pokemon-name">Name: {name} </Box>
+      <Box className="pokemon-description">
+        Description: Types:{types?.[0].type.name}
+      </Box>
     </Card>
   );
 };

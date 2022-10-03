@@ -14,8 +14,21 @@ export interface pokeInterface {
   species?: any;
   sprites?: spriteI; //!
   stats?: statsI[]; //!
-  types?: []; //!
+  types?: typesI[]; //!
   weight?: number;
+}
+
+export interface abilitiesI {
+  ability: {
+    name: string
+  }
+  "is_hidden": boolean
+}
+
+export interface movesI {
+  move: {
+    name: string
+  }
 }
 
 export interface spriteI {
@@ -34,15 +47,9 @@ export interface statsI {
   }
 }
 
-export interface abilitiesI {
-  ability: {
+export interface typesI {
+  type: {
     name: string
   }
-  "is_hidden": boolean
 }
 
-export interface movesI {
-  move: {
-    name: string
-  }
-}
