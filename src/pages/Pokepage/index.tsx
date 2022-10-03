@@ -13,21 +13,20 @@ const emptyData: pokeInterface = {};
 const pokeData = {
   empty: emptyData,
   full: initialPokeData,
-  valid: initialPokeData,
 }
 
 export const PokeContext = createContext(pokeData.empty);
 
 const PokePage = () => {
-  const [name, setName] = useState<'empty' | 'full'>('empty');
+  const [status, setStatus] = useState<'empty' | 'full'>('empty');
 
   const handleClick = () => {
-    const data = name === 'empty' ? 'full' : 'empty';
-    setName(data);
+    const data = status === 'empty' ? 'full' : 'empty';
+    setStatus(data);
   }
 
   return (
-    <PokeContext.Provider value={pokeData[name]}>
+    <PokeContext.Provider value={pokeData[status]}>
       <Box className="pokemon-page">
         <Typography>Pokemon Page</Typography>
         <Container>
