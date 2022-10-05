@@ -1,13 +1,9 @@
-import React, { useContext } from 'react';
-import { Box, Card } from '@mui/material';
-import { PokeContext } from '../pages/Pokepage/index'
+import { Box } from '@mui/material';
+import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
-interface Props {
-}
+const Actions = () => {
 
-const Actions = (props: Props) => {
-
-  const { moves } = useContext(PokeContext);
+  const { moves } = usePokeContext();
 
   const attacksMap = moves?.map((move, i) => {
     return <Box key={'atk' + i}>{move.move.name[0].toUpperCase() + move.move.name.slice(1)}</Box>
