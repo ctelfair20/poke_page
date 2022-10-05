@@ -4,15 +4,7 @@ import PokeImage from './PokeImage';
 import PokeNameAndDescription from './PokeNameAndDescription';
 import "../App.css"
 
-interface Props {
-
-}
-
-const PokeCard = (props: Props) => {
-
-  // const getPokemonName = () => {
-
-  // }
+const PokeCard = () => {
 
   return (
     <Card
