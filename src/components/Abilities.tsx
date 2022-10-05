@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
-import { Box, Card } from '@mui/material';
-import { PokeContext } from '../pages/Pokepage/index'
+import { Box } from '@mui/material';
+import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 interface Props {
 }
 
 const Abilities = (props: Props) => {
 
-  const { abilities } = useContext(PokeContext);
+  const { abilities } = usePokeContext();
+  // console.log('from abilities', pokemon)
+  // const { abilities } = usePokeContext();
 
   const abilitesMap = abilities?.map((ability, i) => {
     return <Box key={'ab' + i}>{ability.ability.name[0].toUpperCase() + ability.ability.name.slice(1)}</Box>
