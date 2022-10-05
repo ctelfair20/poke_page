@@ -9,9 +9,7 @@ const Stats = () => {
   // DON'T WRAP MAPPING FUNCTIONS! THINGS GET CONFUSING! -- ASK ROB
   const statsMap = stats?.map((stat, i) => {
     const StatWithCapsFirstLetter = stat.stat.name[0].toUpperCase() + stat.stat.name.slice(1);
-    const baseStat = stat['base_stat']
-    console.log(baseStat)
-
+    const baseStat = stat['base_stat'];
     const id = 'st' + i
 
     return (
