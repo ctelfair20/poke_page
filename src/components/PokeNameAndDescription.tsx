@@ -2,15 +2,18 @@ import { Container, Box } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 const PokeNameAndDescription = () => {
-
+  // Typescript won't let me add these varibles together like normal strings
   const { id, name, types, height, weight } = usePokeContext();
-  const typeName = types?.[0].type.name;
-  // types?.[0].type.name[0] + types?.[0].type.name.split('')slice(1)
+  const nameFirstLetterCaps = name?.[0].toUpperCase();
+  const remainingLetterInName = name?.slice(1);
+  const typeFirstLetterCaps = types?.[0].type?.name?.[0].toUpperCase();
+  const remainingLetterInType = types?.[0].type?.name?.slice(1);
+
   return (
     <Container>
-      <Box className="pokemon-name">Name: {name} </Box>
+      <Box className="pokemon-name">Name: {`${nameFirstLetterCaps}${remainingLetterInName}`} </Box>
       <Box className="pokemon-description">
-        Description: Number: {id} Types:{typeName} Height: {height} Weight:{weight}
+        Description: Number: {id} Types: {`${typeFirstLetterCaps}${remainingLetterInType}`} Height: {height} Weight: {weight}
       </Box>
     </Container>
   );
