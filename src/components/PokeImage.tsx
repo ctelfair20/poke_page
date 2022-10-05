@@ -4,7 +4,6 @@ import { Container } from '@mui/material';
 const PokeImage = () => {
 
   const { sprites, name } = usePokeContext();
-  console.log(sprites?.other['official-artwork']['front_default']);
 
   return (
     <Container className="pokemon-image-box">
