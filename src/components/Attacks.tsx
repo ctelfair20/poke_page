@@ -6,7 +6,9 @@ const Actions = () => {
   const { moves } = usePokeContext();
 
   const attacksMap = moves?.map((move, i) => {
-    return <Box key={'atk' + i}>{move.move.name[0].toUpperCase() + move.move.name.slice(1)}</Box>
+    const id = 'atk' + i
+    const atkWithCapsFirstLetter = move.move.name[0].toUpperCase() + move.move.name.slice(1)
+    return <Box key={id}>{atkWithCapsFirstLetter}</Box>
   })
 
   return (
