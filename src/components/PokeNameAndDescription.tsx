@@ -13,6 +13,6 @@ const PokeNameAndDescription = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default PokeNameAndDescription;
