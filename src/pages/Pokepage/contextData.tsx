@@ -22,7 +22,7 @@ export const data: pokeInterface = {
   sprites: {
     other: {
       "official-artwork": {
-        "front-default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
       }
     }
   },

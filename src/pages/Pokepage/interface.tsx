@@ -34,7 +34,7 @@ export interface movesI {
 export interface spriteI {
   other: {
     "official-artwork": {
-      "front-default": string
+      "front_default": string
     }
   }
 }
