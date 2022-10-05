@@ -1,18 +1,22 @@
-import React, { useContext } from 'react';
-import { Box, Card } from '@mui/material';
-import { PokeContext } from '../pages/Pokepage/index';
+import { Box } from '@mui/material';
+import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
-interface Props {
-}
+const Stats = () => {
 
-const Stats = (props: Props) => {
-
-  const { stats } = useContext(PokeContext);
+  const { stats } = usePokeContext();
 
   // iterate over pokemon stats and display them
   // DON'T WRAP MAPPING FUNCTIONS! THINGS GET CONFUSING! -- ASK ROB
   const statsMap = stats?.map((stat, i) => {
-    return <Box key={'st' + i}>{stat.stat.name[0].toUpperCase() + stat.stat.name.slice(1)}: {stat['base-stat']}</Box>;
+    const StatWithCapsFirstLetter = stat.stat.name[0].toUpperCase() + stat.stat.name.slice(1);
+    const baseStat = stat['base-stat']
+    const id = 'st' + i
+
+    return (
+      <Box key={id}>
+        {StatWithCapsFirstLetter}: {baseStat}
+      </Box>
+    )
   });
 
   return (
