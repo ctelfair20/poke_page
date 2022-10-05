@@ -1,29 +1,40 @@
-import React from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
+import { pokeInterface } from '../pages/Pokepage/interface';
+import { useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
 
-interface Props {
+const Pokeball = () => {
 
-}
+  const pokemonInfoSetter = useUpdatePokeContext();
 
-interface Pokemon {
-  species: any,
-}
+  // How do I get rid of this error on the dependency array?? -- asked Rob -- its a mystery
+  useEffect(() => {
+    // why is this firing twice?? -- my app is wrapped in react.strictMode https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
+    fetchPokeInfo();
+  }, []);
 
-const Pokeball = (props: Props) => {
-  const randomNumber = (): number => {
-    return Math.floor(Math.random() * 905) + 1;
-  }
+  // This is how you log your data. Use two useEffects! DO NOT: set and call the same data in one useEffect - This is mixing sync and async calls
+
+  // useEffect(() => {
+  //   console.log('infodddd', pokemon)
+  // }, [pokemon]);
 
   const handleOnClick = async () => {
-    const { data } = await axios.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
-    // TODO: Do something with the data that we get back
-    // probably set the data in state
-    console.log(data);
-  }
+    fetchPokeInfo();
+  };
+
+  const fetchPokeInfo = async () => {
+    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
+    pokemonInfoSetter(data);
+  };
+
+  const randomNumber = (): number => {
+    return Math.floor(Math.random() * 905) + 1;
+  };
 
   return (
     <button className="pokeball-button" onClick={handleOnClick}>choose your pokemon!</button>
-  )
-}
+  );
+};
 
 export default Pokeball;

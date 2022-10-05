@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
-// import { PokeContext } from '../pages/Pokepage/index';
 import { Container, Box } from '@mui/material';
-import { useUpdatePokeContext, usePokeContext } from '../pages/Pokepage/PokeContext';
+import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 const PokeNameAndDescription = () => {
 
   const { id, name, types, height, weight } = usePokeContext();
-  // const { name, id, types, height, weight } = useContext(PokeContext);
 
   return (
     <Container>
