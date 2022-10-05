@@ -40,7 +40,7 @@ export interface spriteI {
 }
 
 export interface statsI {
-  'base-stat': number
+  'base_stat': number
   effort: number
   stat: {
     name: string

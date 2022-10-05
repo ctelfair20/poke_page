@@ -28,42 +28,42 @@ export const data: pokeInterface = {
   },
   stats: [
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 1,
       stat: {
         name: "hp"
       }
     },
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 0,
       stat: {
         name: "attack"
       }
     },
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 0,
       stat: {
         name: "defense"
       }
     },
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 0,
       stat: {
         name: "special-attack"
       }
     },
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 0,
       stat: {
         name: "special-defense"
       }
     },
     {
-      'base-stat': 48,
+      'base_stat': 48,
       effort: 0,
       stat: {
         name: "speed"
