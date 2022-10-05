@@ -10,7 +10,7 @@ interface Props {
 // const emptyData: pokeInterface = {};
 
 // This context holds the data retrieved from the api -- not sure why i don't have to tell the code that is empty obj is of type pokeInterface
-export const PokeContext = createContext({});
+export const PokeContext = createContext<pokeInterface>({});
 
 // This context holds the function needed to update the data from the api
 // "pokemon" is the input variable for the setter. Remember to set the variable's type based on the state it is trying to replace
