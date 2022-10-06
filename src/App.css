@@ -21,10 +21,18 @@ body {
   justify-content: space-between;
 } */
 
+.pokemon-page {
+  height: 100vh;
+  background-color: #A8A77A;
+  padding-bottom: 10px;
+  /* padding-top: 10px; */
+}
+
 .right-col {
   background-color: brown;
   min-width: 45%;
-  max-height: 500px;
+  max-height: 490px;
+  overflow: scroll;
 }
 
 .background-by-type {
@@ -43,15 +51,17 @@ body {
 .pokemon-stats {
   background-color: aqua;
   color: rgb(64, 0, 255);
-  width: 50%;
+  width: 48.1%;
   column-count: 2;
+  padding: 5px;
 }
 
 .pokemon-abilities {
   background-color: rgb(255, 255, 0);
   color: rgb(255, 51, 0);
-  width: 50%;
+  width: 48.1%;
   column-count: 2;
+  padding: 5px;
 }
 
 .pokemon-attacks {
