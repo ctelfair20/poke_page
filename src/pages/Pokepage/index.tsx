@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import Abilities from "../../components/Abilities";
-import Actions from "../../components/Attacks";
+import Attacks from "../../components/Attacks";
 import PokeCard from "../../components/PokeCard";
 import Pokeball from "../../components/Pokeball";
 import Stats from "../../components/Stats";
@@ -11,7 +11,14 @@ const PokePage = () => {
   return (
     <PokeProvider>
       <Box className="pokemon-page">
-        <Typography>Pokemon Page</Typography>
+        <Typography
+          variant="h4"
+          align="center"
+          gutterBottom
+        >
+          Pokemon Page
+        </Typography>
+
         <Container>
           <Grid
             container
@@ -19,15 +26,32 @@ const PokePage = () => {
             justifyContent="space-evenly"
             alignItems="center"
           >
-            <Box className="left-col">
+            <Grid
+              item
+              className="left-col"
+            >
               <PokeCard />
-            </Box>
-            <Box className="right-col">
-              <Stats />
-              <Abilities />
-              <Actions />
-              <Pokeball />
-            </Box>
+              <Grid item>
+                <Pokeball />
+              </Grid>
+            </Grid>
+
+            <Grid
+              item
+              className="right-col"
+            >
+              <Grid
+                container
+              >
+                <Stats />
+                <Abilities />
+              </Grid>
+
+              <Grid container direction='column'>
+                <Attacks />
+              </Grid>
+            </Grid>
+
           </Grid>
         </Container>
       </Box>

@@ -12,7 +12,7 @@ const Actions = () => {
   })
 
   return (
-    <Box className="pokemon-actions">Attacks: {attacksMap}</Box>
+    <Box className="pokemon-attacks">Attacks: {attacksMap}</Box>
   );
 };
 
