@@ -11,13 +11,18 @@ const PokePage = () => {
   return (
     <PokeProvider>
       <Box className="pokemon-page">
-        <Typography
+        {/* <Typography
           variant="h4"
           align="center"
           gutterBottom
         >
           Pokemon Page
-        </Typography>
+        </Typography> */}
+        {/* https://1000logos.net/wp-content/uploads/2017/05/Symbol-Pokemon-Logo.jpg -- black logo*/}
+        <Box id="logo-box">
+          <img id="logo" src="https://1000logos.net/wp-content/uploads/2017/05/Pokemon-logo.jpg"
+            alt="pokemon-logo" />
+        </Box>
 
         <Container>
           <Grid

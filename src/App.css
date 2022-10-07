@@ -23,9 +23,19 @@ body {
 
 .pokemon-page {
   height: 100vh;
-  background-color: #A8A77A;
   padding-bottom: 10px;
-  /* padding-top: 10px; */
+}
+
+#logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#logo {
+  height: 100px;
+  width: 170px;
 }
 
 .right-col {
