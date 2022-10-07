@@ -36,9 +36,6 @@ const PokePage = () => {
               className="left-col"
             >
               <PokeCard />
-              <Grid item>
-                <Pokeball />
-              </Grid>
             </Grid>
 
             <Grid
@@ -58,6 +55,9 @@ const PokePage = () => {
             </Grid>
 
           </Grid>
+          <Box>
+            <Pokeball />
+          </Box>
         </Container>
       </Box>
     </PokeProvider>
