@@ -7,9 +7,7 @@ const PokeImage = () => {
   const frontArtwork = sprites?.other['official-artwork']['front_default'];
 
   return (
-    <Container className="pokemon-image-box">
-      <img src={frontArtwork} alt={name} className="pokemon-image" />
-    </Container>
+    <img src={frontArtwork} alt={name} className="pokemon-image" />
   );
 }
 

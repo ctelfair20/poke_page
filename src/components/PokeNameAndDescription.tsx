@@ -1,4 +1,4 @@
-import { Container, Box } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 const PokeNameAndDescription = () => {
@@ -10,12 +10,12 @@ const PokeNameAndDescription = () => {
   const remainingLetterInType = types?.[0].type?.name?.slice(1);
 
   return (
-    <Container>
-      <Box className="pokemon-name">Name: {`${nameFirstLetterCaps}${remainingLetterInName}`} </Box>
-      <Box className="pokemon-description">
+    <Box className='below-image'>
+      <Paper elevation={3} className="pokemon-name">Name: {`${nameFirstLetterCaps}${remainingLetterInName}`} </Paper>
+      <Paper elevation={3} className="pokemon-description">
         Description: Number: {id} Types: {`${typeFirstLetterCaps}${remainingLetterInType}`} Height: {height} Weight: {weight}
-      </Box>
-    </Container>
+      </Paper>
+    </Box>
   );
 };
 

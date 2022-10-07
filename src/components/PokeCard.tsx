@@ -1,4 +1,4 @@
-import { Card } from '@mui/material';
+import { Card, Container, Box } from '@mui/material';
 // import CircularProgress from '@mui/material/CircularProgress';
 import PokeImage from './PokeImage';
 import PokeNameAndDescription from './PokeNameAndDescription';
@@ -9,10 +9,14 @@ const PokeCard = () => {
   return (
     <Card
       elevation={5}
-      className="background-by-type"
+      className="pokemon-card"
     >
-      <PokeImage />
-      <PokeNameAndDescription />
+      <Container>
+        <Box className='pokemon-image-description-box'>
+          <PokeImage />
+          <PokeNameAndDescription />
+        </Box>
+      </Container>
     </Card>
   );
 };
