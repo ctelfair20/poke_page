@@ -3,29 +3,6 @@ body {
   margin: 0;
 }
 
-.App {
-  color: aliceblue;
-  /* background-color: #282c34; */
-  height: 100vh;
-}
-
-/* h1 {
-  margin: 0;
-  text-align: center;
-} */
-
-/* main {
-  background-color: blueviolet;
-  margin: 25px 100px 0px;
-  display: flex;
-  justify-content: space-between;
-} */
-
-.pokemon-page {
-  height: 100vh;
-  padding-bottom: 10px;
-}
-
 #logo-box {
   display: flex;
   align-items: center;
@@ -36,6 +13,20 @@ body {
 #logo {
   height: 100px;
   width: 170px;
+}
+
+#description {
+  text-align: center;
+}
+
+.App {
+  color: aliceblue;
+  height: 100vh;
+}
+
+.pokemon-page {
+  height: 100vh;
+  padding-bottom: 10px;
 }
 
 .right-col {
@@ -55,8 +46,6 @@ body {
 
 .pokemon-image {
   background-color: #A8A77A;
-  /* height: 420px;
-  width: 420px; */
 }
 
 .below-image {
@@ -73,10 +62,9 @@ body {
   margin-top: 10px;
 }
 
-.pokemon-name {}
-
 .pokemon-description {
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pokemon-stats {
@@ -100,10 +88,60 @@ body {
 }
 
 .pokeball-button {
-  border-radius: 100%;
+  background: none;
+  border: none;
+}
+
+.pokeball-box {
+  background-color: #A8A77A;
+}
+
+.outter-circle {
+  background-color: black;
+  width: 100px;
   height: 100px;
+  border-radius: 100%;
+}
+
+.middle-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -19px;
+  left: 27px;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.inner-circle {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  /* z-index: 2; */
+}
+
+.red-half {
+  position: relative;
+  top: 7px;
+  left: 7.5px;
   background-color: red;
-  color: black;
+  width: 85px;
+  height: 40px;
+  border-radius: 50px 50px 0 0;
+}
+
+.white-half {
+  position: relative;
+  top: 13px;
+  left: 7.5px;
+  background-color: white;
+  width: 85px;
+  height: 40px;
+  border-radius: 0 0 50px 50px;
 }
 
 /* https://www.epidemicjohto.com/t882-type-colors-hex-colors

@@ -55,10 +55,10 @@ const PokePage = () => {
             </Grid>
 
           </Grid>
-          <Box>
-            <Pokeball />
-          </Box>
         </Container>
+        <Box className="pokeball-box">
+          <Pokeball />
+        </Box>
       </Box>
     </PokeProvider>
   );

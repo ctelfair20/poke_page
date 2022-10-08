@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { pokeInterface } from '../pages/Pokepage/interface';
 import { useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
+import { Box } from '@mui/material';
 
 const Pokeball = () => {
 
@@ -33,7 +34,17 @@ const Pokeball = () => {
   };
 
   return (
-    <button className="pokeball-button" onClick={handleOnClick}>choose your pokemon!</button>
+    // <button className="pokeball-button" onClick={handleOnClick}>choose your pokemon!</button>
+    <button className="pokeball-button" onClick={handleOnClick}>
+      <Box className='outter-circle'>
+        <Box className='red-half'></Box>
+        <Box className='white-half'>
+          <Box className='middle-circle'>
+            <Box className='inner-circle'></Box>
+          </Box>
+        </Box>
+      </Box>
+    </button>
   );
 };
 
