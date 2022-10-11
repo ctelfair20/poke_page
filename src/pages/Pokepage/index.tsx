@@ -5,6 +5,7 @@ import Stats from "../../components/Stats";
 import Abilities from "../../components/Abilities";
 import Attacks from "../../components/Attacks";
 import Pokeball from "../../components/Pokeball";
+import PokeInfoCard from "../../components/PokeInfoCard";
 
 const PokePage = () => {
 
@@ -36,7 +37,8 @@ const PokePage = () => {
               item
               className="right-col"
             >
-              <Grid
+              <PokeInfoCard />
+              {/* <Grid
                 container
               >
                 <Stats />
@@ -45,7 +47,7 @@ const PokePage = () => {
 
               <Grid container direction='column'>
                 <Attacks />
-              </Grid>
+              </Grid> */}
             </Grid>
           </Grid>
 
