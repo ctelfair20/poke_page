@@ -7,25 +7,28 @@ const PokeNameAndDescription = () => {
   const typeFirstLetterCaps = types?.[0].type?.name?.[0].toUpperCase();
   const remainingLettersInName = name?.slice(1);
   const remainingLettersInType = types?.[0].type?.name?.slice(1);
+  const nameFirstLetterCaps = name?.[0].toUpperCase();
+  const possName = `${nameFirstLetterCaps}${remainingLettersInName}`
 
+  // My attempt to make it so that name only displays the name of the pokemon with a caps first letter
+  // const checkName = (piece: string | undefined) => {
+  //   const nameFirstLetterCaps = name?.[0].toUpperCase();
+  //   const possName = `${nameFirstLetterCaps}${remainingLettersInName}`
 
-  const checkName = (piece: string | undefined) => {
-    const nameFirstLetterCaps = name?.[0].toUpperCase();
-    const possName = `${nameFirstLetterCaps}${remainingLettersInName}`
-
-    piece = piece || '';
-    if (piece.indexOf('-') >= 0) {
-      const before = piece.slice(0, piece.indexOf('-'));
-      const after = piece.slice(piece.indexOf('-') + 1);
-      return `${nameFirstLetterCaps + before + after}`;
-    } else {
-      return possName;
-    }
-  }
+  //   piece = piece || '';
+  //   if (piece.indexOf('-') >= 0) {
+  //     const before = piece.slice(0, piece.indexOf('-'));
+  //     const after = piece.slice(piece.indexOf('-') + 1);
+  //     console.log('pp', piece, 'b', before, 'a', after)
+  //     return `${nameFirstLetterCaps + before + after}`;
+  //   } else {
+  //     return possName;
+  //   }
+  // }
 
   return (
     <Box className='below-image'>
-      <Paper elevation={3} className="pokemon-name">{`${checkName(remainingLettersInName)}`}</Paper>
+      <Paper elevation={3} className="pokemon-name">{possName}</Paper>
       <Paper elevation={3} className="pokemon-description">
         <span id='description'>Description:</span>
         <Box>
