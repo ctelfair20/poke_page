@@ -30,7 +30,6 @@ body {
 }
 
 .right-col {
-  background-color: brown;
   min-width: 45%;
   max-height: 490px;
   overflow: scroll;
