@@ -25,7 +25,7 @@ const Pokeball = () => {
   };
 
   const fetchPokeInfo = async () => {
-    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/151`);
+    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
     pokemonInfoSetter(data);
   };
 

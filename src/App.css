@@ -81,7 +81,7 @@ body {
 }
 
 .pokemon-stats-paper {
-  padding-top: 2px;
+  padding-top: 5px;
   height: 20vh;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .pokemon-abilities-paper {
-  padding-top: 2px;
+  padding-top: 5px;
   height: 10vh;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .pokemon-attacks-paper {
-  padding-top: 2px;
+  padding-top: 5px;
   height: 50vh;
   overflow: scroll;
 }
