@@ -10,7 +10,7 @@ const PokeInfoCard = () => {
       className="pokemon-info-card"
     >
       <Container>
-        <Box>
+        <Box className="pokemon-info-box">
           <Abilities />
           <Stats />
           <Attacks />
