@@ -81,25 +81,33 @@ body {
 }
 
 .pokemon-stats-paper {
+  padding-top: 2px;
   height: 20vh;
 }
 
 .pokemon-stats {
+  padding-left: 10px;
   column-count: 2;
 }
 
 .pokemon-abilities-paper {
+  padding-top: 2px;
   height: 10vh;
 }
 
-.pokemon-abilities {}
+.pokemon-abilities {
+  padding-left: 10px;
+}
 
 .pokemon-attacks-paper {
+  padding-top: 2px;
   height: 50vh;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 .pokemon-attacks {
+  padding-left: 10px;
+  padding-right: 5px;
   column-count: 3;
 }
 
