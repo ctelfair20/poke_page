@@ -54,7 +54,7 @@ const PokePage = () => {
             <Grid
               item
               sm={4}
-              md={5}
+              md={4}
               lg={5}
               className="right-col"
             >
