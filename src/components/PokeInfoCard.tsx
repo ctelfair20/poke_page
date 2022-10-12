@@ -9,7 +9,7 @@ const PokeInfoCard = () => {
       elevation={4}
       className="pokemon-info-card"
     >
-      <Container className="pokemon-info-card">
+      <Container>
         <Box>
           <Abilities />
           <Stats />
