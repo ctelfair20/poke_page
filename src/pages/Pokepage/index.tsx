@@ -30,7 +30,7 @@ const PokePage = () => {
             <Grid
               item
               sm={4}
-              md={5}
+              md={4}
               lg={5}
               className="left-col"
             >
@@ -41,7 +41,7 @@ const PokePage = () => {
             <Grid
               item
               sm={2}
-              md={2}
+              md={1}
               lg={2}
               className="mid-col"
             >
