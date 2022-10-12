@@ -29,12 +29,6 @@ body {
   padding-bottom: 10px;
 }
 
-.right-col {
-  min-width: 45%;
-  max-height: 490px;
-  overflow: scroll;
-}
-
 .pokemon-image-description-box {
   display: flex;
   justify-content: center;
