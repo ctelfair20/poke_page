@@ -93,6 +93,8 @@ body {
 
 .pokeball-box {
   background-color: #A8A77A;
+  display: flex;
+  justify-content: center;
 }
 
 .outter-circle {
