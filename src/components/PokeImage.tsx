@@ -1,5 +1,4 @@
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
-import { Container } from '@mui/material';
 
 const PokeImage = () => {
 
