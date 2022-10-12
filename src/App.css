@@ -80,14 +80,12 @@ body {
 .pokemon-stats {
   background-color: aqua;
   color: rgb(64, 0, 255);
-  width: 50%;
   column-count: 2;
 }
 
 .pokemon-abilities {
   background-color: rgb(255, 255, 0);
   color: rgb(255, 51, 0);
-  width: 50%;
   column-count: 2;
 }
 

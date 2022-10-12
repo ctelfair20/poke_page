@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 const Stats = () => {
@@ -20,7 +20,15 @@ const Stats = () => {
   });
 
   return (
-    <Box className="pokemon-stats">Stats:{statsMap}</Box>
+    // <Box className="pokemon-stats">Stats:{statsMap}</Box>
+    <Paper
+      elevation={3}
+    >
+      Stats:
+      <Box className="pokemon-stats">
+        {statsMap}
+      </Box>
+    </Paper>
   );
 }
 

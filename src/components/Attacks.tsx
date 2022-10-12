@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
 
 const Actions = () => {
@@ -12,7 +12,15 @@ const Actions = () => {
   })
 
   return (
-    <Box className="pokemon-attacks">Attacks: {attacksMap}</Box>
+    // <Box className="pokemon-attacks">Attacks: {attacksMap}</Box>
+    <Paper
+      elevation={3}
+    >
+      Attacks:
+      <Box className="pokemon-attacks">
+        {attacksMap}
+      </Box>
+    </Paper>
   );
 };
 
