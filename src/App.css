@@ -67,7 +67,7 @@ body {
 
 .pokemon-info-card {
   height: 80vh;
-  overflow-y: scroll;
+  display: flex;
 }
 
 .pokemon-info-box {
@@ -86,13 +86,14 @@ body {
 .pokemon-abilities {
   background-color: rgb(255, 255, 0);
   color: rgb(255, 51, 0);
-  column-count: 2;
+
 }
 
 .pokemon-attacks {
   background-color: rgb(0, 255, 89);
   color: rgb(19, 115, 122);
-  column-count: 4;
+  column-count: 3;
+  overflow: scroll;
 }
 
 .pokeball-button {
