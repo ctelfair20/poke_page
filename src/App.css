@@ -15,8 +15,12 @@ body {
   width: 20vw;
 }
 
-#description {
+#description-title {
   text-align: center;
+}
+
+#description {
+  column-count: 2;
 }
 
 .pokemon-page {
@@ -67,7 +71,6 @@ body {
 
 .pokemon-info-card {
   height: 80vh;
-  display: flex;
 }
 
 .pokemon-info-box {

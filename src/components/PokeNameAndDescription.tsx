@@ -30,9 +30,9 @@ const PokeNameAndDescription = () => {
     <Box className='below-image'>
       <Paper elevation={3} className="pokemon-name">{possName}</Paper>
       <Paper elevation={3} className="pokemon-description">
-        <span id='description'>Description:</span>
-        <Box>
-          Number: {id} Types: {`${typeFirstLetterCaps}${remainingLettersInType}`} Height: {height} Weight: {weight}
+        <span id='description-title'>Description:</span>
+        <Box id='description'>
+          Number: {id} Types: {`${typeFirstLetterCaps}${remainingLettersInType}`} Height: {height} Weight:{weight}
         </Box>
       </Paper>
     </Box>
