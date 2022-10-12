@@ -29,9 +29,8 @@ const PokePage = () => {
             {/* This grid item holds the pokemon's image, name and basic info */}
             <Grid
               item
-              // xs={3}
               sm={4}
-              md={4}
+              md={5}
               lg={5}
               className="left-col"
             >
@@ -41,7 +40,6 @@ const PokePage = () => {
             {/* This grid item holds the pokeball button*/}
             <Grid
               item
-              // xs={1}
               sm={2}
               md={2}
               lg={2}
@@ -55,9 +53,8 @@ const PokePage = () => {
             {/* This grid item holds the pokemon's advance info*/}
             <Grid
               item
-              // xs={3}
               sm={4}
-              md={4}
+              md={5}
               lg={5}
               className="right-col"
             >
