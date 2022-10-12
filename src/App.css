@@ -11,8 +11,8 @@ body {
 }
 
 #logo {
-  height: 100px;
-  width: 170px;
+  height: 12vh;
+  width: 20vw;
 }
 
 #description {
@@ -25,6 +25,7 @@ body {
 }
 
 .pokemon-page {
+  background-color: cornflowerblue;
   height: 100vh;
   padding-bottom: 10px;
 }
