@@ -20,18 +20,9 @@ body {
 }
 
 .pokemon-page {
-  background-color: rgb(118, 104, 245);
   height: 100vh;
   padding-bottom: 10px;
 }
-
-.container {
-  background-color: rgb(253, 119, 119);
-}
-
-/* .container2 {
-  height: 100%;
-} */
 
 .pokemon-card {
   display: flex;
@@ -44,7 +35,6 @@ body {
 }
 
 .pokemon-image-description-box {
-  background-color: rgb(0, 86, 245);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +45,6 @@ body {
 }
 
 .pokemon-image {
-  background-color: #A8A77A;
   height: 70%;
   width: 100%;
 }
@@ -106,7 +95,6 @@ body {
 }
 
 .pokeball-box {
-  background-color: #A8A77A;
   display: flex;
   justify-content: center;
 }
