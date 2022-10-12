@@ -20,11 +20,11 @@ const Stats = () => {
   });
 
   return (
-    // <Box className="pokemon-stats">Stats:{statsMap}</Box>
     <Paper
       elevation={3}
+      className="pokemon-stats-paper"
     >
-      <Box>
+      <Box className="title">
         Stats:
       </Box>
       <Box className="pokemon-stats">

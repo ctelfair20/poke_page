@@ -12,11 +12,11 @@ const Actions = () => {
   })
 
   return (
-    // <Box className="pokemon-attacks">Attacks: {attacksMap}</Box>
     <Paper
       elevation={3}
+      className="pokemon-attacks-paper"
     >
-      <Box>
+      <Box className="title">
         Attacks:
       </Box>
       <Box className="pokemon-attacks">
