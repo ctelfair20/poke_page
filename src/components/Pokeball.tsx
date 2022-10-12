@@ -25,7 +25,7 @@ const Pokeball = () => {
   };
 
   const fetchPokeInfo = async () => {
-    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/151`);
+    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
     pokemonInfoSetter(data);
   };
 
@@ -34,7 +34,6 @@ const Pokeball = () => {
   };
 
   return (
-    // <button className="pokeball-button" onClick={handleOnClick}>choose your pokemon!</button>
     <button className="pokeball-button" onClick={handleOnClick}>
       <Box className='outter-circle'>
         <Box className='red-half'></Box>
