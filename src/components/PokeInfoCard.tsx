@@ -5,18 +5,18 @@ import Attacks from "./Attacks";
 
 const PokeInfoCard = () => {
   return (
-    <Card
-      elevation={4}
-      className="pokemon-info-card"
-    >
-      <Container>
-        <Box className="pokemon-info-box">
-          <Abilities />
-          <Stats />
-          <Attacks />
-        </Box>
-      </Container>
-    </Card>
+    // <Card
+    //   elevation={4}
+    //   className="pokemon-info-card"
+    // >
+    // <Container>
+    <Box className="pokemon-info-box">
+      <Abilities />
+      <Stats />
+      <Attacks />
+    </Box>
+    // </Container>
+    // </Card>
   );
 }
 
