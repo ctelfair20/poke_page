@@ -16,7 +16,9 @@ const Actions = () => {
     <Paper
       elevation={3}
     >
-      Attacks:
+      <Box>
+        Attacks:
+      </Box>
       <Box className="pokemon-attacks">
         {attacksMap}
       </Box>

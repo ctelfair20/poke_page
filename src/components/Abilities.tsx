@@ -15,7 +15,9 @@ const Abilities = () => {
     <Paper
       elevation={3}
     >
-      Abilities:
+      <Box>
+        Abilities:
+      </Box>
       <Box className="pokemon-abilities">
         {abilitesMap}
       </Box>
