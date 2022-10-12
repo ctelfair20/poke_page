@@ -17,24 +17,48 @@ const PokePage = () => {
           <img id="logo" src="https://1000logos.net/wp-content/uploads/2017/05/Pokemon-logo.jpg"
             alt="pokemon-logo" />
         </Box>
-        <Container>
 
+        <Container className="container">
           <Grid
             container
-            direction="row"
             justifyContent="space-evenly"
             alignItems="center"
+            rowSpacing={2}
+            columnSpacing={1}
           >
             {/* This grid item holds the pokemon's image, name and basic info */}
             <Grid
               item
+              // xs={3}
+              sm={4}
+              md={5}
+              lg={5}
               className="left-col"
             >
               <PokeCard />
             </Grid>
 
+            {/* This grid item holds the pokeball button*/}
             <Grid
               item
+              // xs={1}
+              sm={2}
+              md={2}
+              lg={2}
+              className="mid-col"
+            >
+              <Box className="pokeball-box">
+                <Pokeball />
+              </Box>
+            </Grid>
+
+            {/* This grid item holds the pokemon's advance info*/}
+            <Grid
+              item
+              // xs={3}
+              sm={5}
+              md={5}
+              lg={5}
               className="right-col"
             >
               <PokeInfoCard />
@@ -50,11 +74,8 @@ const PokePage = () => {
               </Grid> */}
             </Grid>
           </Grid>
-
         </Container>
-        <Box className="pokeball-box">
-          <Pokeball />
-        </Box>
+
       </Box>
     </PokeProvider>
   );
