@@ -25,12 +25,17 @@ body {
 }
 
 .pokemon-page {
-  background-color: cornflowerblue;
+  background-color: rgb(118, 104, 245);
   height: 100vh;
   padding-bottom: 10px;
 }
 
+.container {
+  background-color: rgb(253, 119, 119);
+}
+
 .pokemon-image-description-box {
+  background-color: rgb(0, 86, 245);
   display: flex;
   justify-content: center;
   flex-direction: column;

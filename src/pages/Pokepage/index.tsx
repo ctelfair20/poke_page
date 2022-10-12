@@ -31,7 +31,7 @@ const PokePage = () => {
               item
               // xs={3}
               sm={4}
-              md={5}
+              md={4}
               lg={5}
               className="left-col"
             >
@@ -57,7 +57,7 @@ const PokePage = () => {
               item
               // xs={3}
               sm={4}
-              md={5}
+              md={4}
               lg={5}
               className="right-col"
             >
