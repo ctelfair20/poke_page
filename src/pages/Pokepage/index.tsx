@@ -32,7 +32,6 @@ const PokePage = () => {
               sm={4}
               md={4}
               lg={5}
-              className="left-col"
             >
               <PokeCard />
             </Grid>
@@ -43,7 +42,7 @@ const PokePage = () => {
               sm={2}
               md={1}
               lg={2}
-              className="mid-col"
+              justifyContent="center"
             >
               <Box className="pokeball-box">
                 <Pokeball />
@@ -56,7 +55,6 @@ const PokePage = () => {
               sm={4}
               md={4}
               lg={5}
-              className="right-col"
             >
               <PokeInfoCard />
               {/* <Grid

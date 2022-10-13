@@ -78,6 +78,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0px;
 }
 
 .pokemon-stats-paper {
@@ -94,12 +95,14 @@ body {
 .pokemon-abilities-paper {
   padding-top: 5px;
   padding-bottom: 5px;
-  height: 10vh;
+  min-height: 10vh;
   margin-bottom: 10px;
 }
 
 .pokemon-abilities {
   padding-left: 10px;
+  column-count: 2;
+  height: 70%;
 }
 
 .pokemon-attacks-paper {
@@ -123,6 +126,7 @@ body {
 .pokeball-box {
   display: flex;
   justify-content: center;
+  background-color: aqua;
 }
 
 .outter-circle {
