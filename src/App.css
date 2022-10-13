@@ -78,7 +78,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0px;
+  background-color: blue;
 }
 
 .pokemon-stats-paper {
@@ -108,7 +108,6 @@ body {
 .pokemon-attacks-paper {
   padding-top: 5px;
   height: 50vh;
-  margin-bottom: 10px;
   overflow: scroll;
 }
 
