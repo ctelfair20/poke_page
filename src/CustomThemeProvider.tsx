@@ -8,16 +8,16 @@ interface Props {
   theme: themeI
 }
 
-// This theme can be expanded upon to include anything from the default theme from MUI -- I just need to add the interface to './themeInterfaces'
+// This theme can be expanded upon to include anything from the default theme from MUI -- I just need to add the interface to './themeInterfaces' ASK ROB - I DON'T have to add it to the interface...WHY?
 export const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#CCC'
-    },
-    background: {
-      paper: '#AA4A44',
-    }
-  },
+  // palette: {
+  //   primary: {
+  //     main: '#CCC'
+  //   },
+  //   background: {
+  //     paper: '#CCC',
+  //   }
+  // },
 });
 
 const CustomThemeProvider = ({ children }: Props) => {
