@@ -7,8 +7,6 @@ interface Props {
   children: JSX.Element | JSX.Element[]
 };
 
-// const emptyData: pokeInterface = {};
-
 // This context holds the data retrieved from the api -- not sure why i don't have to tell the code that is empty obj is of type pokeInterface
 export const PokeContext = createContext<pokeInterface>({});
 
@@ -22,7 +20,6 @@ export const useUpdatePokeContext = () => useContext(UpdatePokeContext);
 
 const PokeProvider = ({ children }: Props) => {
 
-  // const [status, setStatus] = useState<'empty' | 'full'>('empty');
   const [pokemon, setPokemon] = useState<pokeInterface>({});
 
   return (

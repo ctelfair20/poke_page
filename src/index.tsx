@@ -10,17 +10,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: '#CCC'
-//     },
-//     background: {
-//       paper: '#AA4A44',
-//     }
-//   },
-// });
-
+// ASK ROB: Should my custom theme provide go here or in the pokepage index file?? What would work better for my porfolio??
 root.render(
   <React.StrictMode>
     <CustomThemeProvider theme={theme}>
