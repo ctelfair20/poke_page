@@ -1,22 +1,14 @@
 import { ThemeProvider, createTheme } from '@mui/material';
+import { themeI } from './themeInterfaces';
 
 interface Props {
   // This comp should expect JSX comps as children
   children: JSX.Element | JSX.Element[]
-  // This theme can be expanded upon to include anything from the default theme from MUI  -- maybe this should go in a separate file so that I can breakdown all the objects into separate interfaces
-  theme: {
-    palette: {
-      primary: {
-        main: string
-      },
-      background: {
-        paper: string
-      }
-    },
-  }
+  // This theme can be expanded upon to include anything from the default theme from MUI -- I just need to add the interface to './themeInterfaces'
+  theme: themeI
 }
 
-// This theme can be expanded upon to include anything from the default theme from MUI
+// This theme can be expanded upon to include anything from the default theme from MUI -- I just need to add the interface to './themeInterfaces'
 export const theme = createTheme({
   palette: {
     primary: {
