@@ -46,7 +46,7 @@ const PokePage = () => {
             >
               <Box className="pokeball-box">
                 <Pokeball />
-                <Button variant="contained" color="primary">hi</Button>
+                {/* <Button variant="contained" color="primary">hi</Button> */}
               </Box>
             </Grid>
 
