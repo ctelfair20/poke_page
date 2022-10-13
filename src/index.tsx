@@ -3,13 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CustomThemeProvider, { theme } from './CustomThemeProvider';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#CCC'
+//     },
+//     background: {
+//       paper: '#AA4A44',
+//     }
+//   },
+// });
+
 root.render(
   <React.StrictMode>
-    <App />
+    <CustomThemeProvider theme={theme}>
+      <App />
+    </CustomThemeProvider>
   </React.StrictMode>
 );
 

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import PokeProvider from "./PokeContext";
 import PokeCard from "../../components/PokeCard";
 import Stats from "../../components/Stats";
@@ -46,6 +46,7 @@ const PokePage = () => {
             >
               <Box className="pokeball-box">
                 <Pokeball />
+                <Button variant="contained" color="primary">hi</Button>
               </Box>
             </Grid>
 
