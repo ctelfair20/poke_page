@@ -1,9 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import PokeProvider from "./PokeContext";
 import PokeCard from "../../components/PokeCard";
-import Stats from "../../components/Stats";
-import Abilities from "../../components/Abilities";
-import Attacks from "../../components/Attacks";
 import Pokeball from "../../components/Pokeball";
 import PokeInfoCard from "../../components/PokeInfoCard";
 
