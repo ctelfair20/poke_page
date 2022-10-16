@@ -21,7 +21,7 @@ const PokePage = () => {
             justifyContent="space-evenly"
             alignItems="center"
             rowSpacing={2}
-            columnSpacing={1}
+          // columnSpacing={1}
           >
             {/* This grid item holds the pokemon's image, name and basic info */}
             <Grid
