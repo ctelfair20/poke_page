@@ -39,7 +39,7 @@ const PokePage = () => {
             {/* This grid item holds the pokeball button*/}
             <Grid
               item
-              sm={2}
+              sm={1}
               md={1}
               lg={2}
               justifyContent="center"
