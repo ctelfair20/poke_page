@@ -1,4 +1,5 @@
 import { Card, Container, Box } from '@mui/material';
+import Number from './Number';
 // import CircularProgress from '@mui/material/CircularProgress';
 import PokeImage from './PokeImage';
 import PokeNameAndDescription from './PokeNameAndDescription';
@@ -12,6 +13,7 @@ const PokeCard = () => {
     >
       <Container>
         <Box className='pokemon-image-description-box'>
+          <Number />
           <PokeImage />
           <PokeNameAndDescription />
         </Box>
