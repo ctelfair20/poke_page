@@ -12,8 +12,8 @@ const PokeCard = () => {
       className="pokemon-card"
     >
       <Container>
+        <Number />
         <Box className='pokemon-image-description-box'>
-          <Number />
           <PokeImage />
           <PokeNameAndDescription />
         </Box>

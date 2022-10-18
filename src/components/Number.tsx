@@ -5,13 +5,14 @@ const Number = () => {
   const { id } = usePokeContext();
 
   return (
-    // <Box className="pokemon-number">
-    <Typography
-      className="pokemon-number"
-    >
-      #{id}
-    </Typography>
-    // {/* </Box> */ }
+    <Box className="banner">
+      <Typography
+        sx={{ fontWeight: 'bold' }}
+      >
+        #{id}
+      </Typography>
+      <Box>heart icon</Box>
+    </Box>
   );
 }
 
