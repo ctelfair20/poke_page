@@ -23,7 +23,16 @@ const Pokeball = () => {
   // }, [pokemon]);
 
   const handleOnClick = async () => {
+    // I feel like I should be awaiting this call
     fetchPokeInfo();
+  };
+
+  const handleFowardArrowClick = () => {
+    //
+  };
+
+  const handleBackArrowClick = () => {
+    //
   };
 
   const fetchPokeInfo = async () => {
