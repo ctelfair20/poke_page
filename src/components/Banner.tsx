@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-const Number = () => {
+const Banner = () => {
   // should make new context
   const { id } = usePokeContext();
 
@@ -12,9 +13,9 @@ const Number = () => {
       >
         #{id}
       </Typography>
-      <Box>heart icon</Box>
+      <Box><FavoriteBorderIcon /></Box>
     </Box>
   );
 }
 
-export default Number;
+export default Banner;
