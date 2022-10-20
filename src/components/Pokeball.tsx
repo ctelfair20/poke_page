@@ -3,12 +3,14 @@ import axios from 'axios';
 import { pokeInterface } from '../pages/Pokepage/interface';
 import { useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
 import { Box } from '@mui/material';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Pokeball = () => {
 
   const pokemonInfoSetter = useUpdatePokeContext();
 
-  // How do I get rid of this error on the dependency array?? -- asked Rob -- its a mystery
+  // How do I get rid of this error on the dependency array??
   useEffect(() => {
     // why is this firing twice?? -- my app is wrapped in react.strictMode https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
     fetchPokeInfo();
@@ -34,16 +36,22 @@ const Pokeball = () => {
   };
 
   return (
-    <button className="pokeball-button" onClick={handleOnClick}>
-      <Box className='outter-circle'>
-        <Box className='red-half'></Box>
-        <Box className='white-half'>
-          <Box className='middle-circle'>
-            <Box className='inner-circle'></Box>
+    <>
+      <Box className='arrow-box'>
+        <ArrowBackIosNewIcon fontSize='large' />
+        <ArrowForwardIosIcon fontSize='large' />
+      </Box>
+      <button className="pokeball-button" onClick={handleOnClick}>
+        <Box className='outter-circle'>
+          <Box className='red-half'></Box>
+          <Box className='white-half'>
+            <Box className='middle-circle'>
+              <Box className='inner-circle'></Box>
+            </Box>
           </Box>
         </Box>
-      </Box>
-    </button>
+      </button>
+    </>
   );
 };
 

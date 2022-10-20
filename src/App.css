@@ -121,14 +121,23 @@ body {
   column-count: 3;
 }
 
-.pokeball-button {
-  background: none;
-  border: none;
-}
-
 .pokeball-box {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.arrow-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* the pokeball is not in the center of its box becuase it is too box. Goal: keep shape but make responsive to its box */
+.pokeball-button {
+  background: none;
+  border: none;
 }
 
 .outter-circle {
