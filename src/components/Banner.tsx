@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { red } from '@mui/material/colors';
 
 const Banner = () => {
-  // should make new context
+
+  const [liked, setLiked] = useState(false);
   const { id } = usePokeContext();
+
+  const handleClick = () => {
+    setLiked(!liked)
+  }
 
   return (
     <Box className="banner">
@@ -13,7 +21,7 @@ const Banner = () => {
       >
         #{id}
       </Typography>
-      <Box><FavoriteBorderIcon /></Box>
+      {liked ? <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} /> : <FavoriteBorderIcon onClick={handleClick} />}
     </Box>
   );
 }
