@@ -28,11 +28,11 @@ const Pokeball = () => {
   };
 
   const handleFowardArrowClick = () => {
-    //
+    // should go foward by one pokemon
   };
 
   const handleBackArrowClick = () => {
-    //
+    // should go back by one pokemon
   };
 
   const fetchPokeInfo = async () => {
