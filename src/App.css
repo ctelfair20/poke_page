@@ -31,7 +31,7 @@ body {
 .pokemon-card {
   display: flex;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
 }
 
 .banner {
@@ -74,12 +74,8 @@ body {
   flex-direction: column;
 }
 
-.pokemon-info-card {
-  height: 80vh;
-}
-
 .pokemon-info-box {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
