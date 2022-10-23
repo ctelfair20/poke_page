@@ -3,6 +3,7 @@ import PokeProvider from "./PokeContext";
 import PokeCard from "../../components/PokeCard";
 import Pokeball from "../../components/Pokeball";
 import PokeInfoCard from "../../components/PokeInfoCard";
+import TeamBox from "../../components/TeamBox";
 
 const PokePage = () => {
 
@@ -64,6 +65,7 @@ const PokePage = () => {
               </Grid> */}
             </Grid>
           </Grid>
+          <TeamBox />
         </Container>
 
       </Box>

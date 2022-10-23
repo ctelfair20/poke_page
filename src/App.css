@@ -183,6 +183,20 @@ body {
   border-radius: 0 0 50px 50px;
 }
 
+.team-box {
+  display: flex;
+}
+
+.team-member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: chartreuse;
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+}
+
 /* https://www.epidemicjohto.com/t882-type-colors-hex-colors
 Normal Type: A8A77A
 Fire Type: EE8130
