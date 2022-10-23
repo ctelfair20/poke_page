@@ -1,6 +1,7 @@
-import { Box } from "@mui/system";
+import { Box, Tooltip } from "@mui/material";
 import { useEffect } from "react";
 import HelpIcon from '@mui/icons-material/Help';
+
 
 interface PropsI {
   id: number
@@ -15,7 +16,12 @@ const TeamCard = ({ id }: PropsI) => {
     <Box
       className="team-member"
     >
-      <HelpIcon />
+      <Tooltip
+        title="favorite a pokemon to add it to your team"
+        disableFocusListener
+      >
+        <HelpIcon />
+      </Tooltip>
     </Box>
   );
 }
