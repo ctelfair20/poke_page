@@ -8,10 +8,8 @@ const TeamBox = () => {
     // return an array of team cards with an id equal to the i
     let team: JSX.Element[] = [];
     for (let i = 1; i <= 7; i++) {
-      team.push(<TeamCard id={i} />)
+      team.push(<TeamCard id={i} key={`team-member-${i}`} />)
     }
-    console.log(team);
-    
     return team;
   }
 

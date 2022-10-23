@@ -120,8 +120,10 @@ body {
 .pokeball-box {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: fit-content;
+  /* width: fit-content; */
+  background-color: aqua;
 }
 
 .arrow-box {
