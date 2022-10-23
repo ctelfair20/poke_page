@@ -184,7 +184,9 @@ body {
 }
 
 .team-box {
+  padding-top: 10px;
   display: flex;
+  justify-content: center;
 }
 
 .team-member {
@@ -193,8 +195,8 @@ body {
   align-items: center;
   background-color: chartreuse;
   border: 2px solid black;
-  height: 100px;
-  width: 100px;
+  /* height: 50px;
+  width: 50px; */
 }
 
 /* https://www.epidemicjohto.com/t882-type-colors-hex-colors
