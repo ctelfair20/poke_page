@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import axios from 'axios';
 import { pokeInterface } from '../pages/Pokepage/interface';
-import { useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
+import { useUpdatePokeContext, usePokeContext, usePokedexContext, useUpdatePokedexContext } from '../pages/Pokepage/PokeContext';
 import { Box } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -9,12 +9,21 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Pokeball = () => {
 
   const pokemonInfoSetter = useUpdatePokeContext();
+  const pokemon = usePokeContext();
+  const pokedex = usePokedexContext();
+  const pokedexSetter = useUpdatePokedexContext();
 
   // How do I get rid of this error on the dependency array??
   useEffect(() => {
     // why is this firing twice?? -- my app is wrapped in react.strictMode https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
     fetchPokeInfo();
   }, []);
+
+  useEffect(() => {
+    const pokedexCopy = pokedex.map(pokemon => { return { ...pokemon } })
+    pokedexCopy.push(pokemon)
+    pokedexSetter(pokedexCopy)
+  }, [pokemon]);
 
   // This is how you log your data. Use two useEffects! DO NOT: set and call the same data in one useEffect - This is mixing sync and async calls
 
@@ -24,7 +33,10 @@ const Pokeball = () => {
 
   const handleOnClick = async () => {
     // I feel like I should be awaiting this call
-    fetchPokeInfo();
+    await fetchPokeInfo();
+    const pokedexCopy = pokedex.map(pokemon => { return { ...pokemon } })
+    pokedexCopy.push(pokemon)
+    await pokedexSetter(pokedexCopy)
   };
 
   const handleFowardArrowClick = () => {
