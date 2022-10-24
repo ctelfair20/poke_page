@@ -4,7 +4,12 @@ import Banner from './Banner';
 import PokeImage from './PokeImage';
 import PokeNameAndDescription from './PokeNameAndDescription';
 
-const PokeCard = () => {
+interface PropsI {
+  setTeamNumber: (value: number) => void
+  teamNumber: number
+}
+
+const PokeCard = ({ setTeamNumber, teamNumber }: PropsI) => {
 
   return (
     <Card
@@ -12,7 +17,7 @@ const PokeCard = () => {
       className="pokemon-card"
     >
       <Container className="pokemon-card-container">
-        <Banner />
+        <Banner setTeamNumber={setTeamNumber} teamNumber={teamNumber} />
         <Box className='pokemon-image-description-box'>
           {/* <Banner /> */}
           <PokeImage />

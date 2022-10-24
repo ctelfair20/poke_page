@@ -5,13 +5,19 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { red } from '@mui/material/colors';
 
-const Banner = () => {
+interface PropsI {
+  setTeamNumber: (value: number) => void
+  teamNumber: number
+}
+
+const Banner = ({ setTeamNumber, teamNumber }: PropsI) => {
 
   const [liked, setLiked] = useState(false);
   const { id } = usePokeContext();
 
   const handleClick = () => {
     setLiked(!liked)
+    setTeamNumber(teamNumber + 1)
   }
 
   return (
