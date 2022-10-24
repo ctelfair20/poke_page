@@ -11,7 +11,7 @@ const TeamBox = ({ teamNumber }: PropsI) => {
     // loop from 1 tp 7
     // return an array of team cards with an id equal to the i
     let team: JSX.Element[] = [];
-    for (let i = 1; i <= 7; i++) {
+    for (let i = 1; i < 7; i++) {
       team.push(<TeamCard id={i} key={`team-member-${i}`} teamNumber={teamNumber} />)
     }
     return team;
