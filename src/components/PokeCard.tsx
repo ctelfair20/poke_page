@@ -11,9 +11,10 @@ const PokeCard = () => {
       elevation={4}
       className="pokemon-card"
     >
-      <Container>
+      <Container className="pokemon-card-container">
         <Banner />
         <Box className='pokemon-image-description-box'>
+          {/* <Banner /> */}
           <PokeImage />
           <PokeNameAndDescription />
         </Box>

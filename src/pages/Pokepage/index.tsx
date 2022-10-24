@@ -36,11 +36,12 @@ const PokePage = () => {
             <Grid
               item
               sm={1}
-              md={2}
+              md={1}
               lg={2}
               justifyContent="center"
             >
-              <Box className="pokeball-box">
+              <Box
+                className="pokeball-box">
                 <Pokeball />
               </Box>
             </Grid>

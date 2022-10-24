@@ -34,9 +34,16 @@ body {
   height: 70vh;
 }
 
+.pokemon-card-container {
+  height: 70vh;
+  margin-top: 20px;
+}
+
 .banner {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(244, 143, 19);
+  height: 5%;
 }
 
 .pokemon-image-description-box {
@@ -44,7 +51,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
+  height: 90%;
+  background-color: bisque;
   /* padding-top: 20px;
   padding-bottom: 20px; */
 }
@@ -52,6 +61,7 @@ body {
 .pokemon-image {
   height: 70%;
   width: 100%;
+  background-color: rgb(150, 98, 34);
 }
 
 .below-image {
@@ -117,19 +127,18 @@ body {
   column-count: 3;
 }
 
+.arrow-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 .pokeball-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: fit-content; */
   background-color: aqua;
-}
-
-.arrow-box {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 /* the pokeball is not in the center of its box becuase it is too box. Goal: keep shape but make responsive to its box */
