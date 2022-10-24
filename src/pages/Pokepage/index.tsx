@@ -4,8 +4,11 @@ import PokeCard from "../../components/PokeCard";
 import Pokeball from "../../components/Pokeball";
 import PokeInfoCard from "../../components/PokeInfoCard";
 import TeamBox from "../../components/TeamBox";
+import { useState } from "react";
 
 const PokePage = () => {
+
+  const [teamNumber, setTeamNumber] = useState(0)
 
   return (
     <PokeProvider>
@@ -29,7 +32,7 @@ const PokePage = () => {
               md={4}
               lg={5}
             >
-              <PokeCard />
+              <PokeCard setTeamNumber={setTeamNumber} teamNumber={teamNumber} />
             </Grid>
 
             {/* This grid item holds the pokeball button*/}
@@ -66,7 +69,7 @@ const PokePage = () => {
               </Grid> */}
             </Grid>
           </Grid>
-          <TeamBox />
+          <TeamBox teamNumber={teamNumber} />
         </Container>
 
       </Box>
