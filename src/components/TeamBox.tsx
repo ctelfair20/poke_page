@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import { Box } from "@mui/system";
 import TeamCard from "./TeamCard";
 
@@ -18,11 +19,21 @@ const TeamBox = ({ teamNumber }: PropsI) => {
   }
 
   return (
-    <Box
-      className="team-box"
-    >
-      {generateTeam()}
-    </Box>
+    <>
+      <Typography
+        variant='h5'
+        align='center'
+        color='darkblue'
+        gutterBottom
+      >
+        Build Yout Team!
+      </Typography>
+      <Box
+        className="team-box"
+      >
+        {generateTeam()}
+      </Box >
+    </>
   );
 }
 
