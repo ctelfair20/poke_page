@@ -1,13 +1,14 @@
+import { useState } from "react";
 import { Box, Container, Grid } from "@mui/material";
 import PokeProvider from "./PokeContext";
 import PokeCard from "../../components/PokeCard";
 import Pokeball from "../../components/Pokeball";
 import PokeInfoCard from "../../components/PokeInfoCard";
 import TeamBox from "../../components/TeamBox";
-import { useState } from "react";
+import { pokeInterface } from './interface';
 
 const PokePage = () => {
-  const [favorited, setFavorited] = useState([]);
+  const [favorited, setFavorited] = useState(Array<pokeInterface>);
   const [teamNumber, setTeamNumber] = useState(0);
 
   return (
@@ -69,7 +70,7 @@ const PokePage = () => {
               </Grid> */}
             </Grid>
           </Grid>
-          <TeamBox teamNumber={teamNumber} />
+          <TeamBox teamNumber={teamNumber} favorited={favorited} />
         </Container>
 
       </Box>
