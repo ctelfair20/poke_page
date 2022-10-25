@@ -1,4 +1,4 @@
-import { Typography, Tooltip } from '@mui/material';
+import { Tooltip } from '@mui/material';
 import { Box } from "@mui/system";
 import HelpIcon from '@mui/icons-material/Help';
 import TeamCard from "./TeamCard";
@@ -45,21 +45,11 @@ const TeamBox = ({ favorited }: PropsI) => {
   }
 
   return (
-    <>
-      <Typography
-        variant='h5'
-        align='center'
-        color='darkblue'
-        gutterBottom
-      >
-        Build Yout Team!
-      </Typography>
-      <Box
-        className="team-box"
-      >
-        {generateTeam()}
-      </Box >
-    </>
+    <Box
+      className="team-box"
+    >
+      {generateTeam()}
+    </Box >
   );
 }
 
