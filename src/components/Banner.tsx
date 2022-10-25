@@ -7,15 +7,14 @@ import { usePokeContext, usePokedexContext, useUpdatePokeContext } from '../page
 import { pokeInterface } from "../pages/Pokepage/interface";
 
 interface PropsI {
-  setTeamNumber: (value: number) => void
-  teamNumber: number
   setFavorited: (pokemon: pokeInterface[]) => void
   favorited: Array<pokeInterface>
+  setLiked: (value: boolean) => void
+  liked: boolean
 }
 
-const Banner = ({ setTeamNumber, teamNumber, favorited, setFavorited }: PropsI) => {
+const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
 
-  const [liked, setLiked] = useState(false);
   const pokemon = usePokeContext();
   const { id } = usePokeContext();
   const pokedex = usePokedexContext();

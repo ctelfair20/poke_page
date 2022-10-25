@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 
 // ASK ROB: Should my custom theme provide go here or in the pokepage index file?? What would work better for my porfolio??
 root.render(
-  <React.StrictMode>
-    <CustomThemeProvider theme={theme}>
-      <App />
-    </CustomThemeProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <CustomThemeProvider theme={theme}>
+    <App />
+  </CustomThemeProvider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

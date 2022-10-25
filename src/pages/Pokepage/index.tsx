@@ -9,7 +9,7 @@ import { pokeInterface } from './interface';
 
 const PokePage = () => {
   const [favorited, setFavorited] = useState(Array<pokeInterface>);
-  const [teamNumber, setTeamNumber] = useState(0);
+  const [liked, setLiked] = useState(false);
 
   return (
     <PokeProvider>
@@ -33,7 +33,7 @@ const PokePage = () => {
               md={4}
               lg={5}
             >
-              <PokeCard setTeamNumber={setTeamNumber} teamNumber={teamNumber} favorited={favorited} setFavorited={setFavorited} />
+              <PokeCard favorited={favorited} setFavorited={setFavorited} liked={liked} setLiked={setLiked} />
             </Grid>
 
             {/* This grid item holds the pokeball button*/}
@@ -46,7 +46,7 @@ const PokePage = () => {
             >
               <Box
                 className="pokeball-box">
-                <Pokeball />
+                <Pokeball liked={liked} setLiked={setLiked} />
               </Box>
             </Grid>
 
@@ -70,7 +70,7 @@ const PokePage = () => {
               </Grid> */}
             </Grid>
           </Grid>
-          <TeamBox teamNumber={teamNumber} favorited={favorited} />
+          <TeamBox favorited={favorited} />
         </Container>
 
       </Box>

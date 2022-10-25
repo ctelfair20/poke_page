@@ -6,13 +6,13 @@ import PokeImage from './PokeImage';
 import PokeNameAndDescription from './PokeNameAndDescription';
 
 interface PropsI {
-  setTeamNumber: (value: number) => void
-  teamNumber: number
   setFavorited: (pokemon: pokeInterface[]) => void
   favorited: Array<pokeInterface>
+  setLiked: (value: boolean) => void
+  liked: boolean
 }
 
-const PokeCard = ({ setTeamNumber, teamNumber, favorited, setFavorited }: PropsI) => {
+const PokeCard = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
 
   return (
     <Card
@@ -20,7 +20,7 @@ const PokeCard = ({ setTeamNumber, teamNumber, favorited, setFavorited }: PropsI
       className="pokemon-card"
     >
       <Container className="pokemon-card-container">
-        <Banner setTeamNumber={setTeamNumber} teamNumber={teamNumber} favorited={favorited} setFavorited={setFavorited} />
+        <Banner favorited={favorited} setFavorited={setFavorited} liked={liked} setLiked={setLiked} />
         <Box className='pokemon-image-description-box'>
           {/* <Banner /> */}
           <PokeImage />

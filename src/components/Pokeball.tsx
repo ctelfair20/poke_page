@@ -6,7 +6,12 @@ import { Box } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-const Pokeball = () => {
+interface PropsI {
+  liked: boolean
+  setLiked: (value: boolean) => void
+}
+
+const Pokeball = (({ liked, setLiked }: PropsI) => {
 
   const pokemonInfoSetter = useUpdatePokeContext();
   const pokemon = usePokeContext();
@@ -16,27 +21,38 @@ const Pokeball = () => {
   // How do I get rid of this error on the dependency array??
   useEffect(() => {
     // why is this firing twice?? -- my app is wrapped in react.strictMode https://stackoverflow.com/questions/60618844/react-hooks-useeffect-is-called-twice-even-if-an-empty-array-is-used-as-an-ar
-    fetchPokeInfo();
+    const updatePokedexOnPageLoad = async () => {
+      await fetchPokeInfo();
+      await pokedexSetter([pokemon])
+    }
+    updatePokedexOnPageLoad();
   }, []);
 
-  useEffect(() => {
-    const pokedexCopy = pokedex.map(pokemon => { return { ...pokemon } })
-    pokedexCopy.push(pokemon)
-    pokedexSetter(pokedexCopy)
-  }, [pokemon]);
+  // useEffect(() => {
+  // const pokedexCopy = pokedex.map((pokemon) => {
+  //   return pokemon
+  // })
+  // console.log('copy1', pokedexCopy);
+  // pokedexCopy.push(pokemon)
+  // console.log('copy2', pokedexCopy);
+  //   pokedexSetter([pokemon])
+  // }, []);
 
   // This is how you log your data. Use two useEffects! DO NOT: set and call the same data in one useEffect - This is mixing sync and async calls
 
   // useEffect(() => {
-  //   console.log('infodddd', pokemon)
-  // }, [pokemon]);
+  //   console.log('pokedex', pokedex);
+  // }, [pokedex]);
 
   const handleOnClick = async () => {
-    // I feel like I should be awaiting this call
+    // fetch random pokemon from pokeapi
     await fetchPokeInfo();
+    // add new pokemon to collection of pokemon already seen(pokedex)
     const pokedexCopy = pokedex.map(pokemon => { return { ...pokemon } })
     pokedexCopy.push(pokemon)
     await pokedexSetter(pokedexCopy)
+    // make sure favorite botton starts out false when looking at a new pokemon
+    setLiked(false)
   };
 
   const handleFowardArrowClick = () => {
@@ -49,7 +65,7 @@ const Pokeball = () => {
 
   const fetchPokeInfo = async () => {
     const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
-    pokemonInfoSetter(data);
+    await pokemonInfoSetter(data);
   };
 
   const randomNumber = (): number => {
@@ -74,6 +90,6 @@ const Pokeball = () => {
       </button>
     </>
   );
-};
+});
 
 export default Pokeball;
