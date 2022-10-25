@@ -9,13 +9,13 @@ interface PropsI {
 const TeamBox = ({ teamNumber }: PropsI) => {
 
   const generateTeam = () => {
-    // loop from 1 tp 7
-    // return an array of team cards with an id equal to the i
-    let team: JSX.Element[] = [];
-    for (let i = 1; i < 7; i++) {
-      team.push(<TeamCard id={i} key={`team-member-${i}`} teamNumber={teamNumber} />)
-    }
-    return team;
+    // if favorites is empty
+      //   display a placeholder '?' and tool tip
+    // 
+    // map over favorites
+      // return a teamCard for each element passing the element to the card so that thr card knows what to display
+    //
+    // check if 
   }
 
   return (
@@ -31,7 +31,7 @@ const TeamBox = ({ teamNumber }: PropsI) => {
       <Box
         className="team-box"
       >
-        {generateTeam()}
+        {/* {generateTeam()} */}
       </Box >
     </>
   );
