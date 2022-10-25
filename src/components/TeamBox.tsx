@@ -13,8 +13,26 @@ const TeamBox = ({ teamNumber, favorited }: PropsI) => {
 
   const generateTeam = () => {
     // if favorites is empty
-    if (favorited.length === 0) {
-      // display a placeholder '?' and tool tip
+    // if (favorited.length === 0) {
+    //   // display a placeholder '?' and tool tip
+    //   return (
+    //     <Tooltip
+    //       title="favorite a pokemon to add it to your team"
+    //       disableFocusListener
+    //     >
+    //       <HelpIcon />
+    //     </Tooltip>
+    //   )
+    // }
+    //
+    // map over favorites
+    const team = favorited.map((pokemon) => {
+      // return a teamCard for each element passing the element to the card so that the card knows what to display
+      return <TeamCard pokemon={pokemon} />
+      //
+    })
+    // check if favorited is not full
+    if (favorited.length !== 6) {
       return (
         <Tooltip
           title="favorite a pokemon to add it to your team"
@@ -24,11 +42,6 @@ const TeamBox = ({ teamNumber, favorited }: PropsI) => {
         </Tooltip>
       )
     }
-    //
-    // map over favorites
-    // return a teamCard for each element passing the element to the card so that thr card knows what to display
-    //
-    // check if
   }
 
   return (

@@ -8,12 +8,12 @@ import { pokeInterface } from '../pages/Pokepage/interface';
 // This component displays the mini art or official art for the current pokemon as a team memeber
 
 interface PropsI {
-  id: number
-  teamNumber: number
+  // id: number
+  // teamNumber: number
   pokemon: pokeInterface
 }
 
-const TeamCard = ({ id, teamNumber, pokemon }: PropsI) => {
+const TeamCard = ({ pokemon }: PropsI) => {
 
   // const pokedex = usePokedexContext();
   // const [matched, setMatch] = useState(false);
