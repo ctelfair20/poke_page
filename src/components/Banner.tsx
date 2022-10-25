@@ -1,23 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { red } from '@mui/material/colors';
 import { Box, Typography } from "@mui/material";
-import { usePokeContext } from '../pages/Pokepage/PokeContext';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { red } from '@mui/material/colors';
+import { usePokeContext, usePokedexContext, useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
+import { pokeInterface } from "../pages/Pokepage/interface";
 
 interface PropsI {
   setTeamNumber: (value: number) => void
   teamNumber: number
+  setFavorited: (pokemon: pokeInterface[]) => void
+  favorited: Array<pokeInterface>
 }
 
-const Banner = ({ setTeamNumber, teamNumber }: PropsI) => {
+const Banner = ({ setTeamNumber, teamNumber, favorited, setFavorited }: PropsI) => {
 
   const [liked, setLiked] = useState(false);
+  const pokemon = usePokeContext();
   const { id } = usePokeContext();
+  const pokedex = usePokedexContext();
+  const setPokedex = useUpdatePokeContext();
+
+  useEffect(() => {
+    if (liked) {
+      setFavorited([...favorited, pokemon])
+    }
+  }, [liked])
 
   const handleClick = () => {
     setLiked(!liked)
-    // setTeamNumber(teamNumber + 1)
   }
 
   return (

@@ -33,7 +33,7 @@ const PokePage = () => {
               md={4}
               lg={5}
             >
-              <PokeCard setTeamNumber={setTeamNumber} teamNumber={teamNumber} />
+              <PokeCard setTeamNumber={setTeamNumber} teamNumber={teamNumber} favorited={favorited} setFavorited={setFavorited} />
             </Grid>
 
             {/* This grid item holds the pokeball button*/}
