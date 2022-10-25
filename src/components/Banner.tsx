@@ -17,7 +17,7 @@ const Banner = ({ setTeamNumber, teamNumber }: PropsI) => {
 
   const handleClick = () => {
     setLiked(!liked)
-    setTeamNumber(teamNumber + 1)
+    // setTeamNumber(teamNumber + 1)
   }
 
   return (

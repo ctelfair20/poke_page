@@ -7,8 +7,8 @@ import TeamBox from "../../components/TeamBox";
 import { useState } from "react";
 
 const PokePage = () => {
-
-  const [teamNumber, setTeamNumber] = useState(0)
+  const [favorited, setFavorited] = useState([]);
+  const [teamNumber, setTeamNumber] = useState(0);
 
   return (
     <PokeProvider>
