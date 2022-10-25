@@ -42,7 +42,6 @@ body {
 .banner {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(244, 143, 19);
   height: 5%;
 }
 
@@ -51,17 +50,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* height: 100%; */
   height: 90%;
-  background-color: bisque;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
 }
 
 .pokemon-image {
   height: 70%;
   width: 100%;
-  background-color: rgb(150, 98, 34);
 }
 
 .below-image {
@@ -138,7 +132,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: aqua;
 }
 
 /* the pokeball is not in the center of its box becuase it is too box. Goal: keep shape but make responsive to its box */
@@ -195,7 +188,6 @@ body {
 }
 
 .team-box {
-  padding-top: 15px;
   display: flex;
   justify-content: center;
 }
@@ -204,10 +196,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: chartreuse;
+  background-color: rgb(228, 228, 228);
   border: 2px solid black;
   height: 50px;
   width: 50px;
+  margin-right: 2px;
 }
 
 .mini-art {
