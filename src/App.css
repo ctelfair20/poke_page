@@ -17,6 +17,12 @@ body {
 
 #description {
   column-count: 2;
+  column-width: 30px;
+}
+
+#types {
+  column-count: 2;
+  column-width: 30px;
 }
 
 .title {
@@ -36,7 +42,7 @@ body {
 
 .pokemon-card-container {
   height: 70vh;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .banner {
@@ -67,13 +73,27 @@ body {
 }
 
 .pokemon-name,
-.pokemon-description {
+.pokemon-description,
+.pokemon-types {
   width: fit-content;
   padding: 5px 10px 5px 10px;
   margin-top: 10px;
 }
 
+.pokemon-types {
+  margin-left: 10px;
+}
+
 .pokemon-description {
+  margin-right: 10px;
+}
+
+.pokemon-description-type {
+  display: flex;
+}
+
+.pokemon-description,
+.pokemon-types {
   display: flex;
   flex-direction: column;
 }

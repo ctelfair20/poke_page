@@ -22,7 +22,6 @@ const PokeCard = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
       <Container className="pokemon-card-container">
         <Banner favorited={favorited} setFavorited={setFavorited} liked={liked} setLiked={setLiked} />
         <Box className='pokemon-image-description-box'>
-          {/* <Banner /> */}
           <PokeImage />
           <PokeNameAndDescription />
         </Box>
