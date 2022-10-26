@@ -7,11 +7,10 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 interface PropsI {
-  liked: boolean
   setLiked: (value: boolean) => void
 }
 
-const Pokeball = (({ liked, setLiked }: PropsI) => {
+const Pokeball = (({ setLiked }: PropsI) => {
 
   const pokemonInfoSetter = useUpdatePokeContext();
   const pokemon = usePokeContext();
@@ -27,16 +26,6 @@ const Pokeball = (({ liked, setLiked }: PropsI) => {
     }
     updatePokedexOnPageLoad();
   }, []);
-
-  // useEffect(() => {
-  // const pokedexCopy = pokedex.map((pokemon) => {
-  //   return pokemon
-  // })
-  // console.log('copy1', pokedexCopy);
-  // pokedexCopy.push(pokemon)
-  // console.log('copy2', pokedexCopy);
-  //   pokedexSetter([pokemon])
-  // }, []);
 
   // This is how you log your data. Use two useEffects! DO NOT: set and call the same data in one useEffect - This is mixing sync and async calls
 

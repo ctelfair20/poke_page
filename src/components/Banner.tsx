@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { red } from '@mui/material/colors';
 import { Box, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { usePokeContext, usePokedexContext, useUpdatePokeContext } from '../pages/Pokepage/PokeContext';
+import { usePokeContext } from '../pages/Pokepage/PokeContext';
 import { pokeInterface } from "../pages/Pokepage/interface";
 
 interface PropsI {

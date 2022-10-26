@@ -46,7 +46,7 @@ const PokePage = () => {
             >
               <Box
                 className="pokeball-box">
-                <Pokeball liked={liked} setLiked={setLiked} />
+                <Pokeball setLiked={setLiked} />
               </Box>
             </Grid>
 
