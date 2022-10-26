@@ -1,6 +1,5 @@
-import { Tooltip } from '@mui/material';
 import { Box } from "@mui/system";
-import HelpIcon from '@mui/icons-material/Help';
+import TeamPlaceholder from "./TeamPlaceholder";
 import TeamCard from "./TeamCard";
 import { pokeInterface } from '../pages/Pokepage/interface';
 
@@ -15,12 +14,7 @@ const TeamBox = ({ favorited }: PropsI) => {
     if (favorited.length === 0) {
       // display a placeholder '?' and tool tip
       return (
-        <Tooltip
-          title="favorite a pokemon to add it to your team"
-          disableFocusListener
-        >
-          <HelpIcon />
-        </Tooltip>
+        <TeamPlaceholder />
       )
     }
     // map over favorites
@@ -32,13 +26,7 @@ const TeamBox = ({ favorited }: PropsI) => {
     // check if favorited is not full
     if (favorited.length !== 6) {
       team.push(
-        <Tooltip
-          key={'Fav?'}
-          title="favorite a pokemon to add it to your team"
-          disableFocusListener
-        >
-          <HelpIcon />
-        </Tooltip>
+        <TeamPlaceholder />
       )
     }
     return team;
