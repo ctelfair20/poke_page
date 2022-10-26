@@ -17,8 +17,6 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
 
   const pokemon = usePokeContext();
   const { id } = usePokeContext();
-  const pokedex = usePokedexContext();
-  const setPokedex = useUpdatePokeContext();
 
   useEffect(() => {
     if (liked) {
@@ -30,6 +28,29 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
     setLiked(!liked)
   }
 
+  const disableFavoriteBtn = () => {
+    // if favorite is 5 or shorter and liked is true
+    if (favorited.length <= 5 && liked) {
+      // display full heart
+      return <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} />
+    } else if (favorited.length <= 5 && !liked) {
+      // display empty heart
+      return <FavoriteBorderIcon onClick={handleClick} />
+      // if favorite is 6 or longer(should never get longer than 6)
+    } else {
+      // check if curent pokemon is in team
+      if (favorited.includes(pokemon)) {
+        // display clickable full heart
+        return <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} />
+        // else
+      } else {
+        // display heart in 'disabled' color and remove onClick
+        return <FavoriteBorderIcon color="disabled" />
+        //
+      }
+    }
+  }
+
   return (
     <Box className="banner">
       <Typography
@@ -37,7 +58,8 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
       >
         #{id}
       </Typography>
-      {liked ? <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} /> : <FavoriteBorderIcon onClick={handleClick} />}
+      {disableFavoriteBtn()}
+      {/* {liked ? <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} /> : <FavoriteBorderIcon onClick={handleClick} />} */}
     </Box>
   );
 }
