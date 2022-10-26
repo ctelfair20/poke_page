@@ -64,7 +64,7 @@ const Pokeball = (({ liked, setLiked }: PropsI) => {
   };
 
   const fetchPokeInfo = async () => {
-    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/715`);
+    const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
     await pokemonInfoSetter(data);
   };
 
