@@ -19,7 +19,12 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
   const { id } = usePokeContext();
 
   useEffect(() => {
-    if (liked) {
+    if (favorited.includes(pokemon) && !liked) {
+      console.log('here');
+      // remove current pokemon from favorites
+      unfavoritePokemon();
+    }
+    if (liked && !favorited.includes(pokemon)) {
       setFavorited([...favorited, pokemon])
     }
   }, [liked])
@@ -28,6 +33,21 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
     setLiked(!liked)
   }
 
+  // remove current pokemon from favorites
+  const unfavoritePokemon = async () => {
+    // find index of current pokemon
+    const index = favorited.indexOf(pokemon)
+    // slice favorited into two parts
+    const firstHalf = favorited.slice(0, index)
+    const secondHalf = favorited.slice(index + 1)
+    // join to parts
+    const newFavs = [...firstHalf, ...secondHalf]
+    console.log('curP', pokemon, 'favs', favorited, '1h', firstHalf, '2h', secondHalf, 'new', newFavs);
+    // set favorites to new join favorited
+    await setFavorited(newFavs)
+  }
+
+  // Tells heart how to function and display under all circumstaces
   const disableFavoriteBtn = () => {
     // if favorite is 5 or shorter and liked is true
     if (favorited.length <= 5 && liked) {
@@ -38,10 +58,14 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
       return <FavoriteBorderIcon onClick={handleClick} />
       // if favorite is 6 or longer(should never get longer than 6)
     } else {
-      // check if curent pokemon is in team
-      if (favorited.includes(pokemon)) {
+      // check if curent pokemon is in team and liked is true
+      if (favorited.includes(pokemon) && liked) {
         // display clickable full heart
         return <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} />
+        // check if curent pokemon is in team and liked is false
+      } else if (favorited.includes(pokemon) && !liked) {
+        // display empty heart
+        return <FavoriteBorderIcon onClick={handleClick} />
         // else
       } else {
         // display heart in 'disabled' color and remove onClick
