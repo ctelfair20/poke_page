@@ -24,7 +24,7 @@ const TeamBox = ({ favorited }: PropsI) => {
       //
     })
     // check if favorited is not full
-    if (favorited.length !== 6) {
+    if (favorited.length < 6) {
       team.push(
         <TeamPlaceholder />
       )
