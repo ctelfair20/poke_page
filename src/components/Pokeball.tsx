@@ -59,7 +59,6 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
     const currentPIndex = pokedex.indexOf(pokemon)
     // access the pokemon after the current pokemon
     const next = pokedex[currentPIndex + 1]
-    console.log(currentPIndex, next, pokedex);
     // if next is exist
     if (next) {
       // set pokemon to be next
@@ -73,7 +72,6 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
     const currentPIndex = pokedex.indexOf(pokemon)
     // access the pokemon before the current pokemon
     const previ = pokedex[currentPIndex - 1]
-    console.log(currentPIndex, previ, pokedex);
     // if previ is exist
     if (previ) {
       // set pokemon to be previ
