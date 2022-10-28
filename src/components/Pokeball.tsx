@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { pokeInterface } from '../pages/Pokepage/interface';
 import { useUpdatePokeContext, usePokeContext, usePokedexContext, useUpdatePokedexContext } from '../pages/Pokepage/PokeContext';
@@ -18,6 +18,8 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   const pokemon = usePokeContext();
   const pokedex = usePokedexContext();
   const pokedexSetter = useUpdatePokedexContext();
+  const [forwardArrow, setForwardArrow] = useState(false);
+  const [backArrow, setBackArrow] = useState(false);
 
   // How do I get rid of this error on the dependency array??
   // This useEffect fetchs the first pokemon and adds it to the pokedex on page load
@@ -40,6 +42,23 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
     } else {
       // set liked to false
       setLiked(false)
+    }
+    // if pokedex is of length 1 OR less, render EITHER arrows
+    // if pokemon is the last in the pokedex, render ONLY the back arrow
+    // if pokemon is the first in the pokedex, render ONLY the forward arrow
+    // if pokemon is either of the three above, render BOTH arrows
+    if (pokedex.length <= 1) {
+      setBackArrow(false)
+      setForwardArrow(false)
+    } else if (pokemon === pokedex[pokedex.length - 1]) {
+      setBackArrow(true)
+      setForwardArrow(false)
+    } else if (pokemon === pokedex[0]) {
+      setBackArrow(false)
+      setForwardArrow(true)
+    } else {
+      setBackArrow(true)
+      setForwardArrow(true)
     }
   }, [pokemon]);
 
@@ -92,8 +111,8 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   return (
     <>
       <Box className='arrow-box'>
-        <ArrowBackIosNewIcon onClick={handleBackArrowClick} fontSize='large' />
-        <ArrowForwardIosIcon onClick={handleFowardArrowClick} fontSize='large' />
+        {backArrow ? <ArrowBackIosNewIcon onClick={handleBackArrowClick} fontSize='large' /> : ''}
+        {forwardArrow ? <ArrowForwardIosIcon onClick={handleFowardArrowClick} fontSize='large' /> : ''}
       </Box>
       <button className="pokeball-button" onClick={handleOnClick}>
         <Box className='outter-circle'>
