@@ -2,10 +2,7 @@
 
 This is your one-stop shop for all your pokemon information needs! Here you can randomly search for any pokemon and see its name, abilities, stats, and attacks. If you come across a pokemon you absolutely love, add it to your team by clicking on the favorites button but don't get greedy! You can only add six. Thems the rules!
 
-![pokepage-gif](https://github.com/ctelfair20/poke_page/blob/main/Screen%20Recording%202022-10-28%20at%204.03.17%20PM.mov)
-
-![](http://i.imgur.com/OUkLi.gif)
-
+![pokepage-gif](https://github.com/ctelfair20/poke_page/blob/main/Screen%20Recording%202022-10-28%20at%204.03.17%20PM.gif)
 
 ## Tech Stack
 
