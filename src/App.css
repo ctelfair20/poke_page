@@ -147,6 +147,10 @@ body {
   margin-bottom: 40px;
 }
 
+.back-arrow-box {
+  margin-right: 40px;
+}
+
 .pokeball-box {
   display: flex;
   justify-content: center;

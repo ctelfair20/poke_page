@@ -111,8 +111,12 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   return (
     <>
       <Box className='arrow-box'>
-        {backArrow ? <ArrowBackIosNewIcon onClick={handleBackArrowClick} fontSize='large' /> : ''}
-        {forwardArrow ? <ArrowForwardIosIcon onClick={handleFowardArrowClick} fontSize='large' /> : ''}
+        <Box className='back-arrow-box'>
+          {backArrow ? <ArrowBackIosNewIcon onClick={handleBackArrowClick} fontSize='large' /> : ''}
+        </Box>
+        <Box className='forward-arrow-box'>
+          {forwardArrow ? <ArrowForwardIosIcon onClick={handleFowardArrowClick} fontSize='large' /> : ''}
+        </Box>
       </Box>
       <button className="pokeball-button" onClick={handleOnClick}>
         <Box className='outter-circle'>
