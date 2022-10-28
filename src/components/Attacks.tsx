@@ -8,6 +8,8 @@ const Actions = () => {
   const attacksMap = moves?.map((move, i) => {
     const id = 'atk' + i;
     const atkWithCapsFirstLetter = move.move.name[0].toUpperCase() + move.move.name.slice(1);
+    console.log();
+
     return <Box key={id}>{atkWithCapsFirstLetter}</Box>
   })
 
@@ -17,7 +19,7 @@ const Actions = () => {
       className="pokemon-attacks-paper"
     >
       <Box className="title">
-        Attacks:
+        Attacks: {attacksMap?.length !== 0 ? '' : "Unknown"}
       </Box>
       <Box className="pokemon-attacks">
         {attacksMap}
