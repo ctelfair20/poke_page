@@ -4,6 +4,14 @@ This is your one-stop shop for all your pokemon information needs! Here you can 
 
 ![](https://github.com/ctelfair20/poke_page/blob/main/Screen%20Recording%202022-10-28%20at%204.03.17%20PM.mov)
 
+## Tech Stack
+
+TypeScript
+React.js
+React Router
+Material.ui
+Axios
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
