@@ -3,6 +3,7 @@ import Stats from "./Stats";
 import Abilities from "./Abilities";
 import Attacks from "./Attacks";
 
+// This componet displays the conponents that make up the right side of the screen
 const PokeInfoCard = () => {
 
   return (

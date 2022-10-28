@@ -11,6 +11,7 @@ interface PropsI {
   liked: boolean
 }
 
+// This componet displays the conponents that make up the left side of the screen
 const PokeCard = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
 
   return (

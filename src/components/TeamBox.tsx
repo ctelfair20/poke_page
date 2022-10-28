@@ -7,6 +7,7 @@ interface PropsI {
   favorited: Array<pokeInterface>
 }
 
+// This component displays the team members or a tooltip to add members if the team is not full
 const TeamBox = ({ favorited }: PropsI) => {
 
   const generateTeam = () => {

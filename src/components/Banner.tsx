@@ -18,13 +18,14 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
   const pokemon = usePokeContext();
   const { id } = usePokeContext();
 
+  // This useEffect ensures that if a pokemon is liked, it is added to your team and if disliked, removes the pokemon from your time
   useEffect(() => {
     if (favorited.includes(pokemon) && !liked) {
-      console.log('here');
       // remove current pokemon from favorites
       unfavoritePokemon();
     }
     if (liked && !favorited.includes(pokemon)) {
+      // add current pokemon from favorites
       setFavorited([...favorited, pokemon])
     }
   }, [liked])
@@ -83,7 +84,6 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
         #{id}
       </Typography>
       {disableFavoriteBtn()}
-      {/* {liked ? <FavoriteIcon sx={{ color: red[500] }} onClick={handleClick} /> : <FavoriteBorderIcon onClick={handleClick} />} */}
     </Box>
   );
 }
