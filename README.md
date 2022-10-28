@@ -1,3 +1,9 @@
+# Introduction
+
+This is your one-stop shop for all your pokemon information needs! Here you can randomly search for any pokemon and see its name, abilities, stats, and attacks. If you come across a pokemon you absolutely love, add it to your team by clicking on the favorites button but don't get greedy! You can only add six. Thems the rules!
+
+<iframe src="https://giphy.com/embed/qBMjlH6xWeKC2FR4jj" width="480" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/qBMjlH6xWeKC2FR4jj">via GIPHY</a></p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
