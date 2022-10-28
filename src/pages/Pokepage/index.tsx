@@ -46,7 +46,7 @@ const PokePage = () => {
             >
               <Box
                 className="pokeball-box">
-                <Pokeball setLiked={setLiked} favorited={favorited} />
+                <Pokeball setLiked={setLiked} favorited={favorited} liked={liked} />
               </Box>
             </Grid>
 
@@ -58,16 +58,6 @@ const PokePage = () => {
               lg={5}
             >
               <PokeInfoCard />
-              {/* <Grid
-                container
-              >
-                <Stats />
-                <Abilities />
-              </Grid>
-
-              <Grid container direction='column'>
-                <Attacks />
-              </Grid> */}
             </Grid>
           </Grid>
           <TeamBox favorited={favorited} />
