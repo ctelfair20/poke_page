@@ -43,7 +43,6 @@ const Banner = ({ favorited, setFavorited, liked, setLiked }: PropsI) => {
     const secondHalf = favorited.slice(index + 1)
     // join to parts
     const newFavs = [...firstHalf, ...secondHalf]
-    console.log('curP', pokemon, 'favs', favorited, '1h', firstHalf, '2h', secondHalf, 'new', newFavs);
     // set favorites to new join favorited
     await setFavorited(newFavs)
   }
