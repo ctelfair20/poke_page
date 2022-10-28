@@ -145,6 +145,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .back-arrow-box {
@@ -162,6 +163,7 @@ body {
 .pokeball-button {
   background: none;
   border: none;
+  margin-bottom: 20px;
 }
 
 .outter-circle {
