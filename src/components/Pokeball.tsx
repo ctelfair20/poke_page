@@ -20,6 +20,7 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   const pokedexSetter = useUpdatePokedexContext();
   const [forwardArrow, setForwardArrow] = useState(false);
   const [backArrow, setBackArrow] = useState(false);
+  const [numberDex, setNumberDex] = useState(Array<number>);
 
   // How do I get rid of this error on the dependency array??
   // This useEffect fetchs the first pokemon and adds it to the pokedex on page load
@@ -44,18 +45,18 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
       setLiked(false)
     }
     // if pokedex is of length 1 OR less, render EITHER arrows
-    // if pokemon is the last in the pokedex, render ONLY the back arrow
-    // if pokemon is the first in the pokedex, render ONLY the forward arrow
-    // if pokemon is either of the three above, render BOTH arrows
     if (pokedex.length <= 1) {
       setBackArrow(false)
       setForwardArrow(false)
+      // if pokemon is the last in the pokedex, render ONLY the back arrow
     } else if (pokemon === pokedex[pokedex.length - 1]) {
       setBackArrow(true)
       setForwardArrow(false)
+      // if pokemon is the first in the pokedex, render ONLY the forward arrow
     } else if (pokemon === pokedex[0]) {
       setBackArrow(false)
       setForwardArrow(true)
+      // if pokemon is either of the three above, render BOTH arrows
     } else {
       setBackArrow(true)
       setForwardArrow(true)
@@ -99,9 +100,21 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   };
 
   const fetchPokeInfo = async () => {
+    // fetch pokemon data
     const { data } = await axios.get<pokeInterface>(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}`);
-    pokemonInfoSetter(data);
-    pokedexSetter([...pokedex, data]);
+    // access fetched pokemon's number
+    const { id } = data;
+    if (id !== undefined) {
+      // check if this pokemon has been fetched before
+      if (numberDex.includes(id)) {
+        //refetch
+        fetchPokeInfo();
+      } else {
+        setNumberDex([...numberDex, id]);
+        pokemonInfoSetter(data);
+        pokedexSetter([...pokedex, data]);
+      }
+    }
   };
 
   const randomNumber = (): number => {
