@@ -1,5 +1,6 @@
 import { Box, Paper } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
+import StatsRating from './StatsRating';
 
 const Stats = () => {
 
@@ -14,7 +15,7 @@ const Stats = () => {
 
     return (
       <Box key={id}>
-        {StatWithCapsFirstLetter}: {baseStat}
+        {StatWithCapsFirstLetter}: <StatsRating baseStat={baseStat} />
       </Box>
     )
   });
