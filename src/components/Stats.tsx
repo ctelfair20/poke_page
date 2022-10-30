@@ -14,8 +14,11 @@ const Stats = () => {
     const id = 'st' + i
 
     return (
-      <Box key={id}>
-        {StatWithCapsFirstLetter}: <StatsRating baseStat={baseStat} />
+      <Box className='stat-box' key={id}>
+        <span className='stat'>
+          {StatWithCapsFirstLetter}:
+        </span>
+        <StatsRating baseStat={baseStat} />
       </Box>
     )
   });

@@ -8,8 +8,8 @@ const PokeInfoCard = () => {
 
   return (
     <Box className="pokemon-info-box">
-      <Abilities />
       <Stats />
+      <Abilities />
       <Attacks />
     </Box>
   );
