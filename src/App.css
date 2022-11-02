@@ -113,7 +113,6 @@ body {
 
 .pokemon-stats {
   padding-left: 10px;
-  /* column-count: 2; */
 }
 
 .stat {
@@ -253,6 +252,7 @@ body {
 }
 
 /* https://www.epidemicjohto.com/t882-type-colors-hex-colors
+color codes for all types of pokemon
 Normal Type: A8A77A
 Fire Type: EE8130
 Water Type: 6390F0
