@@ -41,6 +41,6 @@ export const StoreContextProvider = ({ children }: PropsI) => {
     <StoreContext.Provider value={useStore()}>
       {children}
     </StoreContext.Provider>
-  )
+  );
 }
 
