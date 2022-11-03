@@ -6,6 +6,9 @@ import { Box } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
+import { setPokemon } from '../redux/pokemonSlice';
+import { useDispatch } from 'react-redux';
+
 interface PropsI {
   setLiked: (value: boolean) => void
   liked: boolean
@@ -21,6 +24,8 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
   const [forwardArrow, setForwardArrow] = useState(false);
   const [backArrow, setBackArrow] = useState(false);
   const [numberDex, setNumberDex] = useState(Array<number>);
+
+  const dispatch = useDispatch();
 
   // How do I get rid of this error on the dependency array??
   // This useEffect fetchs the first pokemon and adds it to the pokedex on page load
@@ -111,7 +116,8 @@ const Pokeball = (({ setLiked, liked, favorited }: PropsI) => {
         fetchPokeInfo();
       } else {
         setNumberDex([...numberDex, id]);
-        pokemonInfoSetter(data);
+        // pokemonInfoSetter(data);
+        dispatch(setPokemon(data))
         pokedexSetter([...pokedex, data]);
       }
     }
