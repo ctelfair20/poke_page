@@ -22,7 +22,7 @@ interface PropsI {
   children: JSX.Element | JSX.Element[]
 };
 
-type InitialContextI = {
+interface InitialContextI {
   pokemon?: (pokeInterface | React.Dispatch<React.SetStateAction<pokeInterface>>)[],
   pokedex?: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
   favorited?: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
