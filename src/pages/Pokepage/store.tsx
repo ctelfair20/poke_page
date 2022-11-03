@@ -37,8 +37,10 @@ export const useFavorited = () => useContext(StoreContext).favorited;
 export const useLiked = () => useContext(StoreContext).liked;
 
 export const StoreContextProvider = ({ children }: PropsI) => {
-  <StoreContext.Provider value={useStore()}>
-    {children}
-  </StoreContext.Provider>
+  return (
+    <StoreContext.Provider value={useStore()}>
+      {children}
+    </StoreContext.Provider>
+  )
 }
 
