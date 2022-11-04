@@ -1,7 +1,10 @@
 import { Box, Paper } from '@mui/material';
 import { usePokeContext } from '../pages/Pokepage/PokeContext';
+import { usePokemon } from '../pages/Pokepage/store';
 
 const PokeNameAndDescription = () => {
+
+
   // Typescript won't let me add these varibles together like normal strings -- add " || '' " to variables -- look for css  to do this easier
   const { id, name, types, height, weight } = usePokeContext();
   const typeFirstLetterCaps = types?.[0].type?.name?.[0].toUpperCase();
@@ -10,6 +13,10 @@ const PokeNameAndDescription = () => {
   const remainingLettersInType = types?.[0].type?.name?.slice(1);
   const nameFirstLetterCaps = name?.[0].toUpperCase();
   const possName = `${nameFirstLetterCaps}${remainingLettersInName}`
+
+  // store variables
+  const [pokemon, setPokemon] = usePokemon()
+  // console.log(setPokemon())
 
   // converts data from api to an array of types
   const typesArray = () => {

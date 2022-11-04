@@ -23,12 +23,16 @@ interface PropsI {
 };
 
 interface InitialContextI {
-  pokemon?: (pokeInterface | React.Dispatch<React.SetStateAction<pokeInterface>>)[],
-  pokedex?: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
-  favorited?: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
-  liked?: (boolean | React.Dispatch<React.SetStateAction<boolean>>)[]
+  pokemon: (pokeInterface | React.Dispatch<React.SetStateAction<pokeInterface>>)[],
+  pokedex: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
+  favorited: (pokeInterface[] | React.Dispatch<React.SetStateAction<pokeInterface[]>>)[],
+  liked: (boolean | React.Dispatch<React.SetStateAction<boolean>>)[]
 }
-const StoreContext = createContext<InitialContextI>({});
+const StoreContext = createContext<InitialContextI>({
+  pokemon: [{ name: 'ghjk' }, () => {
+    console.log('hey');
+  }], pokedex: [], favorited: [], liked: []
+});
 
 // custom hooks
 export const usePokemon = () => useContext(StoreContext).pokemon;
